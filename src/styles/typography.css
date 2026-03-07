@@ -1,0 +1,8 @@
+:root {
+  --font-family-base: system-ui, sans-serif;
+
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 32px;
+}
