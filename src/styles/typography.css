@@ -1,8 +1,8 @@
 :root {
-  --font-family-base: system-ui, sans-serif;
+  --font-family-base: playfair-display, serif;
 
   --text-sm: 14px;
-  --text-md: 16px;
-  --text-lg: 20px;
-  --text-xl: 32px;
+  --text-md: 20px;
+  --text-lg: 40px;
+  --text-xl: 75px;
 }
