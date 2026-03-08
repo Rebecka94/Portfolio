@@ -1,9 +1,5 @@
 import styles from "./Button.module.css";
-
-interface ButtonProps {
-  children: React.ReactNode;
-  variant?: string;
-}
+import type { ButtonProps } from "./ButtonType";
 
 export default function Button({ children, variant = "primary" }: ButtonProps) {
   return (
