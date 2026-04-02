@@ -1,17 +1,37 @@
 .button {
   padding: var(--space-sm) var(--space-md);
-  border-radius: var(--radius-sm);
   border: none;
-  font-size: var(--text-md);
   cursor: pointer;
+  font-family: var(--font-family-base);
 }
 
 .primary {
   background: var(--color-primary);
-  color: white;
+  color: var(--color-text-white);
 }
 
 .secondary {
   background: var(--color-secondary);
-  color: white;
+  color: var(--color-text-white);
+}
+
+.sm {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--text-sm);
+  border-radius: var(--radius-sm);
+  margin: var(--space-sm) 0 var(--space-sm) 0;
+}
+
+.md {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--text-md);
+  border-radius: var(--radius-md);
+  margin: var(--space-md) 0 var(--space-md) 0;
+}
+
+.lg {
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--text-lg);
+  border-radius: var(--radius-md);
+  margin: var(--space-lg) 0 var(--space-lg) 0;
 }

@@ -1,4 +1,4 @@
-export interface TextProps {
+export interface TextProps extends React.HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
-  size?: string;
+  size: "small" | "medium" ;
 }

@@ -1,17 +1,9 @@
-.sm {
+.small {
+  margin: 0 0 var(--space-sm) 0;
   font-size: var(--text-sm);
 }
 
-.md {
+.medium {
+  margin: 0 0 var(--space-md) 0;
   font-size: var(--text-md);
-}
-
-.lg {
-  font-size: var(--text-lg);
-  font-style: italic;
-}
-
-.xl {
-  font-size: var(--text-xl);
-  font-weight: 500;
 }

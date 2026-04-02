@@ -5,14 +5,17 @@ import Text from "../components/ui/Text/Text";
 export default function App() {
   return (
     <div className="App">
-      <Text size="xl">Text XL</Text>
-      <Text size="lg">Text LG</Text>
-      <Text size="md">Text MD</Text>
-      <Text size="sm">Text SM</Text>
+      <h1>h1</h1>
+      <h2>h2</h2>
+      <h3>h3</h3>
+
+      <Text size="medium">Text MD</Text>
+      <Text size="small">Text SM</Text>
       <nav>
         <Link to="/about">About</Link>
-        <Button>Save</Button>
-        <Button variant="secondary">Cancel</Button>
+        <Button variant="primary" size="sm">Small</Button>
+        <Button variant="primary" size="md">Medium</Button>
+        <Button size="lg" variant="secondary">large</Button>
       </nav>
     </div>
   );
