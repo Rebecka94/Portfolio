@@ -3,6 +3,7 @@
 
 body {
   margin: 0;
+  padding: var(--space-lg);
   font-family: var(--font-family-base);
   color: var(--color-text);
   background: var(--color-background);

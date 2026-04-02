@@ -1,9 +1,13 @@
 :root {
   /* colors */
-  --color-primary: #2563eb;
-  --color-secondary: #f59e0b;
-  --color-text: #111827;
-  --color-background: #DBDBCE;
+  --color-primary: #8b5a47;
+  --color-secondary: #6b7a62;
+  --color-background: #dbdbce;
+  
+  /* text colors */
+  --color-text-black: #000000;
+  --color-text-white: #ffffff;
+  --color-text-green: #494b3a;
 
   /* spacing */
   --space-sm: 8px;
@@ -11,6 +15,6 @@
   --space-lg: 24px;
 
   /* radius */
-  --radius-sm: 6px;
-  --radius-md: 12px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
 }
