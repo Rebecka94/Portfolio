@@ -1,4 +1,55 @@
-.container {
+.hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  min-height: 80vh;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 250px;
+}
+
+.text {
+  max-width: 500px;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.profile {
+  width: 260px;
+  border-radius: 16px;
+  position: relative;
+  z-index: 2;
+}
+
+.shadow {
+  position: absolute;
+  width: 270px;
+  top: 30px;
+  left: 40px;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.shapeGreen {
+  position: absolute;
+  width: 300px;
+  top: -80px;
+  left: -110px;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.shapePink {
+  position: absolute;
+  width: 320px;
+  bottom: -80px;
+  left: -40px;
+  z-index: 1;
+  opacity: 0.8;
 }
