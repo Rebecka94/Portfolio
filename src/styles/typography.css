@@ -2,7 +2,7 @@
   --font-family-base: playfair-display, serif;
 
   --text-sm: 14px;
-  --text-md: 20px;
+  --text-md: 24px;
   --text-lg: 40px;
   --text-xl: 75px;
 }
@@ -10,7 +10,8 @@
 h1 {
   margin: 0 0 var(--space-lg) 0;
   font-size: var(--text-xl);
-  color: var( --color-text-green)
+  color: var( --color-text-green);
+  font-weight: lighter;
 }
 
 h2 {

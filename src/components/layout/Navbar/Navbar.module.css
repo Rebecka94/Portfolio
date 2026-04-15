@@ -4,17 +4,19 @@
 }
 
 .container {
+  padding: var(--space-md) 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
+  text-align: center;
+  width: 100%;
 }
 
 .links {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 20px;
+  gap: 50px;
   margin: 7px 0 7px 0;
   padding: 0;
 }
@@ -23,9 +25,20 @@
   text-decoration: none;
   color: var(--color-text-green);
   font-size: var(--text-md);
-  transition: color 0.2s;
+  transition: all 0.5s;
+  position: relative;
+  display: inline-block;
 }
 
-.links a:hover {
-  color: var(--color-primary);
+.links a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-image: url("/Vector-1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

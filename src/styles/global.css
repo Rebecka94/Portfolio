@@ -1,11 +1,29 @@
 @import "./tokens.css";
 @import "./typography.css";
 
+html,
 body {
   margin: 0;
-  padding: var(--space-lg);
+  padding: 0;
+  height: 100%;
+}
+
+body {
   font-family: var(--font-family-base);
   color: var(--color-text);
   background: var(--color-background);
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding: var(--space-lg);
 }

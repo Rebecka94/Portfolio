@@ -1,0 +1,31 @@
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text {
+  color: var(--color-text-secondary, #666);
+  font-size: 0.875rem;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+}
+
+.links a {
+  color: var(--color-primary, #0066cc);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
