@@ -2,7 +2,11 @@
   /* colors */
   --color-primary: #8b5a47;
   --color-secondary: #494B3A;
-  --color-background: #dbdbce;
+  
+  /* background colors */
+  --color-background: #f1f1eb;
+  --color-background-secondary: #F5F6F3;
+  --color-background-dark: #BABBA6;
   
   /* text colors */
   --color-text-black: #000000;
