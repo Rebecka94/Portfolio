@@ -15,6 +15,13 @@
   color: var(--color-text-white);
 }
 
+.outlined {
+  background: transparent;
+  color: var(--color-secondary);
+  border: 3px solid var(--color-secondary);
+  font-weight: 550;
+}
+
 .sm {
   padding: var(--space-sm) var(--space-md);
   font-size: var(--text-sm);
