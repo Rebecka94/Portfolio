@@ -7,10 +7,12 @@
 
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 250px;
-  margin-top: 12rem;
+  margin-top: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .text {
@@ -18,39 +20,23 @@
 }
 
 .imageWrapper {
-  position: relative;
+  width: 100%;
+  max-width: 450px;
 }
 
 .profile {
-  width: 260px;
+  width: 100%;
+  height: auto;
   border-radius: 16px;
-  position: relative;
-  z-index: 2;
+  display: block;
 }
 
-.shadow {
-  position: absolute;
-  width: 270px;
-  top: 30px;
-  left: 40px;
-  z-index: 0;
-  opacity: 0.3;
-}
-
-.shapeGreen {
-  position: absolute;
-  width: 300px;
-  top: -80px;
-  left: -110px;
-  z-index: 0;
-  opacity: 0.8;
-}
-
-.shapePink {
-  position: absolute;
-  width: 320px;
-  bottom: -80px;
-  left: -40px;
-  z-index: 1;
-  opacity: 0.8;
+/* Tablet and larger */
+@media (min-width: 800px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    margin-top: 6rem;
+  }
 }

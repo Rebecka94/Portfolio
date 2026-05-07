@@ -19,12 +19,8 @@ export default function Hero() {
         </div>
 
         <div className={styles.imageWrapper}>
-          <img src="/Ellipse-shadow.png" className={styles.shadow} />
-          <img src="/Ellipse-green.png" className={styles.shapeGreen} />
-          <img src="/Ellipse-pink.png" className={styles.shapePink} />
-          <img src="/profileimg.png" alt="Rebecka" className={styles.profile} />
+          <img src="/profile-img.png" alt="Rebecka" className={styles.profile} />
         </div>
-
       </div>
       </div>
     </section>

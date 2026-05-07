@@ -1,8 +1,24 @@
 .navbar {
   padding: 20px 0;
+  position: relative;
 }
 
-.links {
+.navWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5rem;
+}
+
+.mobileTop {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.desktopLinks {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -12,10 +28,131 @@
   padding: 0;
 }
 
-.links a {
+.desktopLinks li {
+  display: flex;
+  align-items: center;
+}
+
+.desktopLinks a {
   text-decoration: none;
   color: var(--color-text-green);
   font-size: 20px;
   font-weight: 550;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  gap: 5px;
+  font-size: 24px;
+  color: var(--color-secondary);
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  background-color: var(--color-background-secondary);
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border-bottom: 1px solid var(--color-background-dark);
+  visibility: hidden;
+}
+
+.mobileMenu.open {
+  max-height: 500px;
+  visibility: visible;
+}
+
+.mobileMenu li {
+  width: 100%;
+}
+
+.mobileMenu a {
+  text-decoration: none;
+  color: var(--color-text-green);
+  font-size: 18px;
+  font-weight: 550;
+  display: block;
+}
+
+/* Mobile styles */
+@media (max-width: 800px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .mobileTop {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .desktopLinks {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+}
+
+/* Tablet and larger */
+@media (min-width: 800px) {
+  .navbar {
+    padding: 20px 0;
+  }
+
+  .navWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .mobileTop {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .desktopLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .desktopLinks a {
+    font-size: 20px;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
