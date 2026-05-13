@@ -29,6 +29,9 @@ export default function Navbar() {
           </div>
           <ul className={styles.desktopLinks}>
             <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
               <Link to="/about">About</Link>
             </li>
             <li>
@@ -42,6 +45,18 @@ export default function Navbar() {
           </ul>
         </div>
         <ul className={`${styles.mobileMenu} ${isOpen ? styles.open : ""}`}>
+          <button
+            className={styles.closeButton}
+            onClick={toggleMenu}
+            aria-label="Close menu"
+          >
+            <i className="fas fa-xmark"></i>
+          </button>
+          <li>
+            <Link to="/" onClick={() => setIsOpen(false)}>
+              Home
+            </Link>
+          </li>
           <li>
             <Link to="/about" onClick={() => setIsOpen(false)}>
               About
