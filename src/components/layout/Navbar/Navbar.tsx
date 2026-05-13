@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 import styles from "./Navbar.module.css";
 
@@ -29,13 +28,13 @@ export default function Navbar() {
           </div>
           <ul className={styles.desktopLinks}>
             <li>
-              <Link to="/">Home</Link>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <a href="#about">About</a>
             </li>
             <li>
-              <Link to="/projects">Projects</Link>
+              <a href="#projects">Projects</a>
             </li>
             <li>
               <Button variant="outlined" size="sm" style={{ fontSize: "20px" }}>
@@ -53,19 +52,19 @@ export default function Navbar() {
             <i className="fas fa-xmark"></i>
           </button>
           <li>
-            <Link to="/" onClick={() => setIsOpen(false)}>
+            <a href="#home" onClick={() => setIsOpen(false)}>
               Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/about" onClick={() => setIsOpen(false)}>
+            <a href="#about" onClick={() => setIsOpen(false)}>
               About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="/projects" onClick={() => setIsOpen(false)}>
+            <a href="#projects" onClick={() => setIsOpen(false)}>
               Projects
-            </Link>
+            </a>
           </li>
         </ul>
       </div>
