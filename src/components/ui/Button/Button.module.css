@@ -18,13 +18,20 @@
 .outlined {
   background: transparent;
   color: var(--color-secondary);
-  border: 3px solid var(--color-secondary);
+  border: 2.5px solid var(--color-secondary);
   font-weight: 550;
+}
+
+.xs {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+  margin: var(--space-sm) 0 var(--space-sm) 0;
 }
 
 .sm {
   padding: var(--space-sm) var(--space-md);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   border-radius: var(--radius-sm);
   margin: var(--space-sm) 0 var(--space-sm) 0;
 }
