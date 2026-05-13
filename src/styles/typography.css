@@ -1,28 +1,46 @@
 :root {
   --font-family-base: playfair-display, serif;
 
-  --text-sm: 14px;
-  --text-md: 24px;
-  --text-lg: 40px;
+  --text-xs: 14px;
+  --text-sm: 22px;
+  --text-md: 34px;
+  --text-lg: 50px;
   --text-xl: 75px;
 }
 
 h1 {
   margin: 0 0 var(--space-md) 0;
-  font-size: var(--text-xl);
-  color: var( --color-text-green);
-  font-weight: lighter;
+  font-size: var(--text-lg);
+  color: var(--color-text-green);
+  font-weight: 500;
 }
 
 h2 {
-  margin: 0 0 var(--space-md) 0;
-  font-size: var(--text-lg);
-  color: var( --color-text-green)
+  margin: 0 0 var(--space-sm) 0;
+  font-size: var(--text-md);
+  color: var(--color-text-green);
 }
 
 h3 {
   margin: 0 0 var(--space-md) 0;
-  font-size: var(--text-md);
-  color: var( --color-text-green);
+  font-size: var(--text-sm);
+  color: var(--color-text-green);
   font-weight: normal;
+}
+
+
+/* Desktop */
+@media (min-width: 800px) {
+  h1 {
+    font-size: var(--text-xl);
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: var(--text-lg);
+  }
+
+  h3 {
+    font-size: var(--text-md);
+  }
 }

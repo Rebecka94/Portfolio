@@ -14,6 +14,7 @@
   --color-text-green: #494b3a;
 
   /* spacing */
+  --space-xs: 5px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 24px;
