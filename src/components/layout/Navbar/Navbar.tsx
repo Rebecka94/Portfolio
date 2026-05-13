@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="container">
         <div className={styles.navWrapper}>
           <div className={styles.mobileTop}>
-            <Button variant="outlined" size="sm" style={{ fontSize: "20px" }}>
+            <Button variant="outlined" size="xs" style={{ fontSize: "18px" }}>
               Contact
             </Button>
 

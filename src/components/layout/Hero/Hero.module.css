@@ -2,21 +2,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-top: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-top: 2rem;
+}
+
+.heading {
+  margin: 0;
+  text-align: center;
 }
 
 .text {
   max-width: 500px;
+  text-align: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.span {
+  color: var(--color-secondary);
+  font-weight: 600;
 }
 
 .imageWrapper {
@@ -33,10 +44,28 @@
 
 /* Tablet and larger */
 @media (min-width: 800px) {
-  .content {
-    display: flex;
-    flex-direction: row;
-    gap: 8rem;
-    margin-top: 6rem;
+.hero{
+  min-height: 90vh;
+}
+
+.content {
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 3rem;
   }
+
+.heading {
+  margin: 0;
+  text-align: left;
+}
+
+.text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.span {
+  color: var(--color-secondary);
+  font-weight: 550;
+}
 }
