@@ -1,5 +1,6 @@
 import Text from "../../ui/Text/Text";
 import styles from "./AboutSection.module.css";
+import SkillsCards from "./SkillsCards";
 import TechStack from "./TechStack";
 
 export default function AboutSection() {
@@ -16,32 +17,8 @@ export default function AboutSection() {
             building intuitive user interfaces.
           </Text>
         </div>
-
-        <div className={styles.cardsContainer}>
-          <div className={styles.card}>
-            <h3>Clean Code</h3>
-            <Text size="xsmall">
-              Writing maintainable and well-documented code that stands the test
-              of time
-            </Text>
-          </div>
-          <div className={styles.card}>
-            <h3>Modern Tools</h3>
-            <Text size="xsmall">
-              Leveraging the latest technologies for optimal performance and
-              scalability
-            </Text>
-          </div>
-          <div className={styles.card}>
-            <h3>UX Focused</h3>
-            <Text size="xsmall">
-              Building intuitive interfaces that users love to interact with
-              every day
-            </Text>
-          </div>
-        </div>
+        <SkillsCards />
       </div>
-
       <TechStack />
     </div>
   );
