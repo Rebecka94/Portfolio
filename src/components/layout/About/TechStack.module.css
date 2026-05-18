@@ -1,7 +1,30 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--space-md);
+  align-items: flex-start;
   margin-top: var(--space-lg);
+  width: 100%;
+}
+
+.techList {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+}
+
+.techcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
