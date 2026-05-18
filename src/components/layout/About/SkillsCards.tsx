@@ -6,7 +6,7 @@ export default function SkillsCards() {
     <div className={styles.cardsContainer}>
       <div className={styles.cardWrapper}>
         <img
-          src="/images/tech/Git.png"
+          src="/images/tech/code.svg"
           alt="Clean Code"
           className={styles.cardIcon}
         />
@@ -20,7 +20,7 @@ export default function SkillsCards() {
       </div>
       <div className={styles.cardWrapper}>
         <img
-          src="/images/tech/Git.png"
+          src="/images/tech/rocket.svg"
           alt="Modern Tools"
           className={styles.cardIcon}
         />
@@ -34,7 +34,7 @@ export default function SkillsCards() {
       </div>
       <div className={styles.cardWrapper}>
         <img
-          src="/images/tech/Git.png"
+          src="/images/tech/brush.svg"
           alt="UX Focused"
           className={styles.cardIcon}
         />

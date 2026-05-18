@@ -17,6 +17,9 @@
   width: 48px;
   height: 48px;
   object-fit: contain;
+  background-color: var(--color-background-dark);
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .card {
