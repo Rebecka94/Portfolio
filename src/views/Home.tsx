@@ -1,4 +1,5 @@
 import Hero from "../components/layout/Hero/Hero";
+import TechStack from "../components/layout/Techstack/TechStack";
 import About from "./About";
 import Projects from "./Projects";
 
@@ -9,6 +10,7 @@ export default function Home() {
         <Hero />
       </section>
       <About />
+      <TechStack />
       <Projects />
     </div>
   );
