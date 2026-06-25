@@ -6,6 +6,15 @@
   width: 100%;
   padding: var(--space-xl);
   box-sizing: border-box;
+   background:
+    radial-gradient(
+      circle at bottom right,
+      rgba(95, 120, 103, 0.12) 0%,
+      rgba(95, 120, 103, 0.06) 25%,
+      transparent 55%
+    ),
+    #ffffff;
+
 }
 
 .techList {
