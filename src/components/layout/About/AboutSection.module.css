@@ -1,5 +1,4 @@
 .container {
-  background-color: var(--color-background-light);
   min-height: 80vh;
   display: flex;
   flex-direction: column;
@@ -7,8 +6,7 @@
   padding: var(--space-xl);
   text-align: left;
   gap: var(--space-md);
-  padding-left: var(--space-xl);
-  padding-right: var(--space-xl);
+  padding: var(--space-xl);
 }
 
 .content {
