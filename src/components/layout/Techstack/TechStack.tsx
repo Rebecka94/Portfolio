@@ -1,3 +1,4 @@
+import Text from "../../ui/Text/Text";
 import styles from "./TechStack.module.css";
 
 const technologies = [
@@ -19,6 +20,9 @@ export default function TechStack() {
   return (
     <div className={styles.container}>
       <h3>Tech Stack</h3>
+      <Text size="xsmall">
+        A look at the languages, frameworks, and tools I reach for when designing, building, and shipping projects.
+      </Text>
       <div className={styles.techList}>
         {technologies.map((tech) => (
           <div key={tech.name} className={styles.techcontainer}>

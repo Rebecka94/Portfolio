@@ -6,6 +6,18 @@
   --text-md: 34px;
   --text-lg: 50px;
   --text-xl: 75px;
+
+  /* Body copy scale (Text component) - fluid between mobile and desktop */
+  --text-body-xs: clamp(13px, 0.5vw + 11px, 14px);
+  --text-body-sm: clamp(15px, 1vw + 12px, 18px);
+  --text-body-md: clamp(17px, 1.1vw + 13px, 20px);
+
+  /* Button label scale - fluid between mobile and desktop */
+  --text-button-xs: clamp(13px, 0.7vw + 10px, 14px);
+  --text-button-sm: clamp(14px, 0.8vw + 11px, 16px);
+  --text-button-md: clamp(15px, 0.9vw + 12px, 18px);
+  --text-button-lg: clamp(17px, 1vw + 13px, 20px);
+  --text-button-xl: clamp(19px, 1.1vw + 14px, 22px);
 }
 
 h1 {

@@ -22,7 +22,7 @@ export default function Hero() {
                   <span className={styles.span}>Frontend Developer</span><br /> crafting clean and modern web experiences.
                 </Text>
                 <Link to="/projects">
-                <Button variant="secondary" size="sm">View my work →</Button>
+                <Button variant="secondary" size="sm">View my work</Button>
                 </Link>
               </div>
             </>
@@ -34,7 +34,7 @@ export default function Hero() {
                   <span className={styles.span}>Frontend Developer</span><br /> crafting clean and modern web experiences.
                 </Text>
                 <Link to="/projects">
-                  <Button variant="secondary" size="md">View my work →</Button>
+                  <Button variant="secondary" size="md">View my work</Button>
                 </Link>
               </div>
               <div className={styles.imageWrapper}>

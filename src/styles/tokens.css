@@ -20,4 +20,12 @@
   /* radius */
   --radius-sm: 4px;
   --radius-md: 8px;
+
+  --gradient-surface: radial-gradient(
+      circle at bottom right,
+      rgba(95, 120, 103, 0.12) 0%,
+      rgba(95, 120, 103, 0.06) 25%,
+      transparent 55%
+    ),
+    var(--color-background-light);
 }

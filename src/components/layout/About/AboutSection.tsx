@@ -8,7 +8,6 @@ export default function AboutSection() {
       <div className={styles.content}>
         <div className={styles.intro}>
           <h2>About Me 👋🏼 </h2>
-          <span className={styles.underline}></span>
           <Text size="small">
             I’m a frontend developer with a background in education and a strong
             interest in design and user experience. I enjoy creating modern web

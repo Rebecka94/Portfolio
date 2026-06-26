@@ -1,14 +1,8 @@
 footer {
   padding: 2rem 1rem;
   text-align: center;
-  background:
-    radial-gradient(
-      circle at bottom right,
-      rgba(95, 120, 103, 0.12) 0%,
-      rgba(95, 120, 103, 0.06) 25%,
-      transparent 55%
-    ),
-    #ffffff;
+  background: var(--gradient-surface);
+  background-attachment: fixed;
 
 }
 

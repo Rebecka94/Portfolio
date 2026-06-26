@@ -17,13 +17,6 @@
   width: 100%;
 }
 
-.underline {
-  width: 100px;
-  height: 2.5px;
-  background-color: var(--color-secondary);
-  margin-top: -0.5rem;
-}
-
 .intro {
   display: flex;
   flex-direction: column;

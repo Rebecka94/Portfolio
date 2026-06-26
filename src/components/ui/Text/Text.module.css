@@ -1,14 +1,14 @@
 .xsmall {
   margin: 0 0 var(--space-sm) 0;
-  font-size: var(--text-xs);
+  font-size: var(--text-body-xs);
 }
 
 .small {
   margin: 0 0 var(--space-sm) 0;
-  font-size: var(--text-sm);
+  font-size: var(--text-body-sm);
 }
 
 .medium {
   margin: 0 0 var(--space-md) 0;
-  font-size: var(--text-md);
+  font-size: var(--text-body-md);
 }

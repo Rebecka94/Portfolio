@@ -42,7 +42,9 @@ export default function ProjectsSection() {
   return (
     <div id="projects" className={styles.container}>
       <h2>My projects</h2>
-      <p>List of projects ↓</p>
+      <Text size="small">
+        These are some of the projects I've been working on, both individually and in groups.
+      </Text>
       <div className={styles.grid}>
         {projects.map((project) => (
           <div key={project.title} className={styles.card}>

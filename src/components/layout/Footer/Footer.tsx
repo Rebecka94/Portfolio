@@ -10,13 +10,13 @@ export default function Footer() {
           © {currentYear} Rebecka Larsson. All rights reserved.
         </p>
         <div className={styles.links}>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Rebecka94" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/rebecka-larssson94" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
-          <a href="mailto:hello@example.com">Email</a>
+          <a href="mailto:rebeckalarsson.1994@gmail.com">Email</a>
         </div>
       </div>
     </footer>

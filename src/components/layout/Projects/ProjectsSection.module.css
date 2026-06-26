@@ -3,6 +3,8 @@
   padding: var(--space-xl);
   background-color: var(--color-background-light);
   box-sizing: border-box;
+    background: var(--gradient-surface);
+  background-attachment: fixed;
 }
 
 .grid {

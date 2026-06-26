@@ -1,6 +1,8 @@
 .navbar {
   padding: 20px 0;
   position: relative;
+  background: var(--gradient-surface);
+  background-attachment: fixed;
 }
 
 .navWrapper {
