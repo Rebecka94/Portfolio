@@ -6,14 +6,79 @@
   width: 100%;
   padding: var(--space-xl);
   box-sizing: border-box;
+  background-attachment: fixed;
+}
+
+.label {
+    margin-top: 1rem;
+  display: block;
+  color: var(--color-accent);
+  font-size: var(--text-button-sm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.techGroups {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  width: 100%;
+    margin-bottom: 2rem;
+}
+
+.techGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 800px) {
+  .techGroups {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
+  .groupLabel::before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0.4;
+  }
+}
+
+.groupLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-black);
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+.groupLabel::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0.4;
 }
 
 .techList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--space-lg);
-  width: 100%;
+  gap: var(--space-md);
   box-sizing: border-box;
 }
 
@@ -27,33 +92,33 @@
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   flex: 0 0 auto;
-  width: 75px;
-  height: 75px;
+  width: 68px;
+  height: 68px;
   justify-content: center;
 }
 
 .techcontainer span {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-align: center;
   font-weight: 500;
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
 @media (min-width: 480px) {
   .icon {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
   }
 }
 
 @media (min-width: 800px) {
   .icon {
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
   }
 }
