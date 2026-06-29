@@ -14,7 +14,7 @@ export default function Navbar() {
       <div className="container">
         <div className={styles.navWrapper}>
           <div className={styles.mobileTop}>
-            <Button variant="outlined" size="xs" style={{ fontSize: "18px" }}>
+            <Button variant="outlined" size="sm">
               Contact
             </Button>
 
@@ -37,7 +37,7 @@ export default function Navbar() {
               <a href="#projects">Projects</a>
             </li>
             <li>
-              <Button variant="outlined" size="sm" style={{ fontSize: "20px" }}>
+              <Button variant="outlined" size="sm">
                 Contact
               </Button>
             </li>
