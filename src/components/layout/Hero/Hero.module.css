@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   min-height: 90vh;
-  background: var(--gradient-surface);
   background-attachment: fixed;
+  background: var(--gradient-surface);
 }
 
 .content {
@@ -28,8 +28,86 @@
   padding-right: 4rem;
 }
 
-.span {
+.label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--color-accent);
+  font-size: var(--text-button-sm);
   font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.role {
+  position: relative;
+  display: inline-block;
+  margin: var(--space-sm) 0 0 0;
+  font-size: var(--text-body-md);
+  font-weight: 600;
+  color: var(--color-text-green);
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.buttonLink {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.buttonLink button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  height: 3rem;
+}
+
+.connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.connectLabel {
+  font-size: var(--text-body-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-black);
+  opacity: 0.7;
+}
+
+.socialRow {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-text-green);
+  color: var(--color-text-green);
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--color-text-green);
+  color: var(--color-text-white);
 }
 
 .imageWrapper {
@@ -52,8 +130,10 @@
 
 .content {
   flex-direction: row;
-  gap: 2rem;
-  margin-top: 3rem;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   }
 
 .heading {
@@ -62,11 +142,36 @@
 }
 
 .text {
-  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+  max-width: 600px;
+  padding-left: 0;
+  padding-right: 0;
   text-align: left;
 }
 
-.span {
-  font-weight: 550;
+.buttonRow {
+  flex-direction: row;
+  align-items: flex-start;
+  width: auto;
+  gap: var(--space-md);
+}
+
+.buttonLink,
+.buttonLink button {
+  width: auto;
+}
+
+.connect {
+  align-items: flex-start;
+}
+
+.imageWrapper {
+  flex: 1;
+  max-width: 480px;
 }
 }

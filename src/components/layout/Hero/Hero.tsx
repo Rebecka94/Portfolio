@@ -7,35 +7,90 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   const isMobile = useIsMobile();
 
+  const connect = (
+    <div className={styles.connect}>
+      <span className={styles.connectLabel}>Let's connect</span>
+      <div className={styles.socialRow}>
+        <a
+          href="https://github.com/Rebecka94"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className={styles.socialIcon}
+        >
+          <i className="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rebecka-larssson94"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className={styles.socialIcon}
+        >
+          <i className="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="mailto:rebeckalarsson.1994@gmail.com"
+          aria-label="Email"
+          className={styles.socialIcon}
+        >
+          <i className="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  );
+
   return (
     <section className={styles.hero}>
       <div className="container">
         <div className={styles.content}>
           {isMobile ? (
             <>
-              <h1 className={styles.heading}>Hi, I'm Rebecka</h1>
+              <span className={styles.label}>Hi, I'm</span>
+              <h1 className={styles.heading}>Rebecka Larsson</h1>
               <div className={styles.imageWrapper}>
                 <img src="/profile-img.png" alt="Rebecka" className={styles.profile} />
               </div>
               <div className={styles.text}>
+                <p className={styles.role}>
+                  Frontend Developer
+                </p>
                 <Text size="small">
-                  <span className={styles.span}>Frontend Developer</span><br /> crafting clean and modern web experiences.
+                  I craft clean, modern and user-friendly web experiences with a
+                  focus on design, performance and accessibility.
                 </Text>
-                <Link to="/projects">
-                <Button variant="secondary" size="sm">View my work</Button>
+                <div className={styles.buttonRow}>
+                <Link to="/projects" className={styles.buttonLink}>
+                  <Button variant="secondary" size="sm">View my work</Button>
                 </Link>
+                <Link to="/about" className={styles.buttonLink}>
+                  <Button variant="outlined" size="sm">Learn more about me</Button>
+                </Link>
+                </div>
+                {connect}
               </div>
             </>
           ) : (
             <>
               <div className={styles.text}>
-                <h1>Hi, I'm Rebecka</h1>
+                <span className={styles.label}>Hi, I'm</span>
+                <h1>Rebecka Larsson</h1>
+                <p className={styles.role}>
+                  Frontend Developer
+                </p>
                 <Text size="medium">
-                  <span className={styles.span}>Frontend Developer</span><br /> crafting clean and modern web experiences.
+                  I craft clean, modern and user-friendly web experiences with a
+                  focus on design, performance and accessibility.
                 </Text>
-                <Link to="/projects">
+                <div className={styles.buttonRow}>
+                <Link to="/projects" className={styles.buttonLink}>
                   <Button variant="secondary" size="md">View my work</Button>
                 </Link>
+                <Link to="/about" className={styles.buttonLink}>
+                  <Button variant="outlined" size="md">Learn more about me</Button>
+                </Link>
+                </div>
+                {connect}
               </div>
               <div className={styles.imageWrapper}>
                 <img src="/profile-img.png" alt="Rebecka" className={styles.profile} />
