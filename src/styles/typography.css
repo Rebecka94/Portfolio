@@ -2,10 +2,10 @@
   --font-family-base: "DM Sans", sans-serif;
 
   --text-xs: 14px;
-  --text-sm: 22px;
-  --text-md: 34px;
-  --text-lg: 50px;
-  --text-xl: 75px;
+  --text-sm: 25px;
+  --text-md: 38px;
+  --text-lg: 45px;
+  --text-xl: 65px;
 
   /* Body copy scale (Text component) - fluid between mobile and desktop */
   --text-body-xs: clamp(13px, 0.5vw + 11px, 14px);
@@ -29,7 +29,7 @@ h1 {
 
 h2 {
   margin: 0 0 var(--space-sm) 0;
-  font-size: var(--text-md);
+  font-size: var(--text-sm);
   color: var(--color-text-green);
 }
 

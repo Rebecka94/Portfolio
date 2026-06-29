@@ -49,7 +49,7 @@ export default function Hero() {
               <span className={styles.label}>Hi, I'm</span>
               <h1 className={styles.heading}>Rebecka Larsson</h1>
               <div className={styles.imageWrapper}>
-                <img src="/profile-img.png" alt="Rebecka" className={styles.profile} />
+                <img src="/profileimg.png" alt="Rebecka" className={styles.profile} />
               </div>
               <div className={styles.text}>
                 <p className={styles.role}>
@@ -93,7 +93,7 @@ export default function Hero() {
                 {connect}
               </div>
               <div className={styles.imageWrapper}>
-                <img src="/profile-img.png" alt="Rebecka" className={styles.profile} />
+                <img src="/profileimg.png" alt="Rebecka" className={styles.profile} />
               </div>
             </>
           )}

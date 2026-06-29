@@ -40,7 +40,7 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <div id="projects" className={styles.container}>
+    <div id="projects" className={`container ${styles.container}`}>
       <div className={styles.header}>
         <div>
           <span className={styles.label}>My projects</span>

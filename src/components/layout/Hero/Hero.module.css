@@ -11,21 +11,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: var(--space-lg);
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 .heading {
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .text {
-  max-width: 500px;
-  text-align: center;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  width: 100%;
+  text-align: left;
 }
 
 .label {
@@ -75,6 +75,7 @@
   align-items: center;
   gap: var(--space-sm);
   margin-top: var(--space-lg);
+  width: 100%;
 }
 
 .connectLabel {
@@ -112,7 +113,6 @@
 
 .imageWrapper {
   width: 100%;
-  max-width: 450px;
 }
 
 .profile {
@@ -131,7 +131,7 @@
 .content {
   flex-direction: row;
   justify-content: space-between;
-  gap: 4rem;
+  gap: 10rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
   }

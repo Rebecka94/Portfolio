@@ -4,7 +4,8 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  padding: var(--space-xl);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
   box-sizing: border-box;
   background-attachment: fixed;
 }
@@ -24,7 +25,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--space-lg);
+  gap: var(--space-xl);
   margin-top: var(--space-lg);
   width: 100%;
     margin-bottom: 2rem;
@@ -44,12 +45,8 @@
     gap: var(--space-xl);
   }
 
-  .groupLabel::before {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background-color: currentColor;
-    opacity: 0.4;
+  .techList {
+    gap: var(--space-md);
   }
 }
 
@@ -66,6 +63,7 @@
   white-space: nowrap;
 }
 
+.groupLabel::before,
 .groupLabel::after {
   content: "";
   flex: 1;
@@ -78,7 +76,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  justify-content: flex-start;
+  gap: var(--space-xl);
   box-sizing: border-box;
 }
 
@@ -92,8 +91,8 @@
   border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   flex: 0 0 auto;
-  width: 68px;
-  height: 68px;
+  width: 64px;
+  height: 64px;
   justify-content: center;
 }
 
@@ -104,19 +103,24 @@
 }
 
 .icon {
-  width: 32px;
-  height: 32px;
+  width: 45px;
+  height: 45px;
   object-fit: contain;
 }
 
 @media (min-width: 480px) {
   .icon {
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
   }
 }
 
 @media (min-width: 800px) {
+  .techcontainer {
+    width: 68px;
+    height: 68px;
+  }
+
   .icon {
     width: 38px;
     height: 38px;

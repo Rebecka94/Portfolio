@@ -1,6 +1,7 @@
 .container {
   min-height: 90vh;
-  padding: var(--space-xl);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
   box-sizing: border-box;
   background-attachment: fixed;
    margin-top: 4rem;

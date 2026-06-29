@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.content}>
+      <div className={`container ${styles.content}`}>
         <p className={styles.text}>
           © {currentYear} Rebecka Larsson. All rights reserved.
         </p>

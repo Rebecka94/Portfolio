@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--space-xl);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
   text-align: left;
   gap: var(--space-md);
-  padding: var(--space-xl);
   margin-top: 2rem;
   margin-bottom: 2rem;
 }

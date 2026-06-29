@@ -5,7 +5,7 @@ import SkillsCards from "./SkillsCards";
 
 export default function AboutSection() {
   return (
-    <div id="about" className={styles.container}>
+    <div id="about" className={`container ${styles.container}`}>
       <div className={styles.content}>
         <div className={styles.intro}>
           <span className={styles.label}>About me</span>

@@ -37,7 +37,7 @@ const techGroups = [
 
 export default function TechStack() {
   return (
-    <div className={styles.container}>
+    <div className={`container ${styles.container}`}>
       <span className={styles.label}>Tech stack</span>
       <h2>Technologies I work with</h2>
       <div className={styles.techGroups}>
