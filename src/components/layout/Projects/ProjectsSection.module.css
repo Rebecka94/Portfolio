@@ -1,10 +1,29 @@
 .container {
   min-height: 90vh;
   padding: var(--space-xl);
-  background-color: var(--color-background-light);
   box-sizing: border-box;
-    background: var(--gradient-surface);
   background-attachment: fixed;
+   margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.label {
+  display: block;
+  color: var(--color-accent);
+  font-size: var(--text-button-sm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .grid {

@@ -41,7 +41,12 @@ const projects: Project[] = [
 export default function ProjectsSection() {
   return (
     <div id="projects" className={styles.container}>
-      <h2>My projects</h2>
+      <div className={styles.header}>
+        <div>
+          <span className={styles.label}>My projects</span>
+          <h2>Things I've built</h2>
+        </div>
+      </div>
       <Text size="small">
         These are some of the projects I've been working on, both individually and in groups.
       </Text>

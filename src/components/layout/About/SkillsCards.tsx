@@ -4,7 +4,6 @@ import styles from "./SkillsCards.module.css";
 export default function SkillsCards() {
   return (
     <div className={styles.container}>
-      <h3>Things i care about</h3>
       <div className={styles.card}>
         <div className={styles.cardItem}>
           <img

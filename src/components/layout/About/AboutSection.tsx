@@ -1,3 +1,4 @@
+import Button from "../../ui/Button/Button";
 import Text from "../../ui/Text/Text";
 import styles from "./AboutSection.module.css";
 import SkillsCards from "./SkillsCards";
@@ -7,18 +8,25 @@ export default function AboutSection() {
     <div id="about" className={styles.container}>
       <div className={styles.content}>
         <div className={styles.intro}>
-          <h2>About Me 👋🏼 </h2>
+          <span className={styles.label}>About me</span>
+          <h2>Building ideas through code and design.</h2>
           <Text size="small">
-            I’m a frontend developer with a background in education and a strong
-            interest in design and user experience. I enjoy creating modern web
-            interfaces and bringing ideas to life through clean and thoughtful
-            frontend development. Over the past year, I’ve worked with React,
-            Next.js, TypeScript, and modern frontend workflows through
-            internships and personal projects, while continuing to grow as a
-            developer every day.
+            I'm a frontend developer with a background in education and a
+            strong interest in design and user experience. I enjoy turning
+            ideas into modern web interfaces using React, Next.js,
+            TypeScript, and more.
           </Text>
+          <a
+            href="https://www.linkedin.com/in/rebecka-larssson94"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="secondary" size="md">Learn more about me →</Button>
+          </a>
         </div>
-        <SkillsCards />
+        <div className={styles.skills}>
+          <SkillsCards />
+        </div>
       </div>
     </div>
   );

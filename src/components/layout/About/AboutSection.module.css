@@ -1,5 +1,4 @@
 .container {
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,6 +6,8 @@
   text-align: left;
   gap: var(--space-md);
   padding: var(--space-xl);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .content {
@@ -17,19 +18,37 @@
   width: 100%;
 }
 
+.label {
+  display: block;
+  color: var(--color-accent);
+  font-size: var(--text-button-sm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
 }
 
+.skills {
+  width: 100%;
+}
+
 @media (min-width: 800px) {
   .content {
-    flex-direction: column;
-    gap: var(--space-lg);
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xl);
   }
 
   .intro {
-    width: 80%;
+    width: 45%;
+  }
+
+  .skills {
+    flex: 1;
   }
 }
