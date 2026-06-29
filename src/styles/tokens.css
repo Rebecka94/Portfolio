@@ -1,10 +1,11 @@
 :root {
   --color-background: #fafcfb;
-  --color-background-light: #ffffff;
+  --color-background-light: #f6f5f0;
   --color-background-dark: #f3f6f4;
 
   --color-primary: #7c9785;
   --color-secondary: #5f7867;
+  --color-accent: #e08a72;
 
   --color-text-black: #1f1f1f;
   --color-text-green: #2f4739;

@@ -1,9 +1,7 @@
 footer {
   padding: 2rem 1rem;
   text-align: center;
-  background: var(--gradient-surface);
   background-attachment: fixed;
-
 }
 
 .content {
