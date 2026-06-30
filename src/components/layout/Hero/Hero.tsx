@@ -1,6 +1,7 @@
 import { useIsMobile } from "./useIsMobile";
 import Button from "../../ui/Button/Button";
 import Text from "../../ui/Text/Text";
+import Reveal from "../../ui/Reveal/Reveal";
 import styles from "./Hero.module.css";
 import { Link } from "react-router-dom";
 
@@ -48,10 +49,10 @@ export default function Hero() {
             <>
               <span className={styles.label}>Hi, I'm</span>
               <h1 className={styles.heading}>Rebecka Larsson</h1>
-              <div className={styles.imageWrapper}>
+              <Reveal className={styles.imageWrapper} distance={24}>
                 <img src="/profileimg.png" alt="Rebecka" className={styles.profile} />
-              </div>
-              <div className={styles.text}>
+              </Reveal>
+              <Reveal className={styles.text} distance={24}>
                 <p className={styles.role}>
                   Frontend Developer
                 </p>
@@ -68,11 +69,11 @@ export default function Hero() {
                 </Link>
                 </div>
                 {connect}
-              </div>
+              </Reveal>
             </>
           ) : (
             <>
-              <div className={styles.text}>
+              <Reveal className={styles.text} distance={24}>
                 <span className={styles.label}>Hi, I'm</span>
                 <h1>Rebecka Larsson</h1>
                 <p className={styles.role}>
@@ -91,10 +92,10 @@ export default function Hero() {
                 </Link>
                 </div>
                 {connect}
-              </div>
-              <div className={styles.imageWrapper}>
+              </Reveal>
+              <Reveal className={styles.imageWrapper} distance={24}>
                 <img src="/profileimg.png" alt="Rebecka" className={styles.profile} />
-              </div>
+              </Reveal>
             </>
           )}
         </div>

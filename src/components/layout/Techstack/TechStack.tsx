@@ -1,3 +1,4 @@
+import Reveal from "../../ui/Reveal/Reveal";
 import styles from "./TechStack.module.css";
 
 const techGroups = [
@@ -37,7 +38,7 @@ const techGroups = [
 
 export default function TechStack() {
   return (
-    <div className={`container ${styles.container}`}>
+    <Reveal className={`container ${styles.container}`}>
       <span className={styles.label}>Tech stack</span>
       <h2>Technologies I work with</h2>
       <div className={styles.techGroups}>
@@ -59,6 +60,6 @@ export default function TechStack() {
           </div>
         ))}
       </div>
-    </div>
+    </Reveal>
   );
 }

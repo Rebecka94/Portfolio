@@ -1,11 +1,12 @@
 import Button from "../../ui/Button/Button";
 import Text from "../../ui/Text/Text";
+import Reveal from "../../ui/Reveal/Reveal";
 import styles from "./AboutSection.module.css";
 import SkillsCards from "./SkillsCards";
 
 export default function AboutSection() {
   return (
-    <div id="about" className={`container ${styles.container}`}>
+    <Reveal id="about" className={`container ${styles.container}`}>
       <div className={styles.content}>
         <div className={styles.intro}>
           <span className={styles.label}>About me</span>
@@ -28,6 +29,6 @@ export default function AboutSection() {
           <SkillsCards />
         </div>
       </div>
-    </div>
+    </Reveal>
   );
 }

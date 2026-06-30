@@ -13,6 +13,11 @@
 .secondary {
   background: var(--color-secondary);
   color: var(--color-text-white);
+  transition: filter 0.2s ease;
+}
+
+.secondary:hover {
+  filter: brightness(0.9);
 }
 
 .outlined {
@@ -20,6 +25,12 @@
   color: var(--color-secondary);
   border: 2.5px solid var(--color-secondary);
   font-weight: 550;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.outlined:hover {
+  background: var(--color-secondary);
+  color: var(--color-text-white);
 }
 
 .xs {

@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import Text from "../../ui/Text/Text";
+import Reveal from "../../ui/Reveal/Reveal";
 import styles from "./ProjectsSection.module.css";
 
 interface Project {
@@ -40,7 +42,7 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <div id="projects" className={`container ${styles.container}`}>
+    <Reveal id="projects" className={`container ${styles.container}`}>
       <div className={styles.header}>
         <div>
           <span className={styles.label}>My projects</span>
@@ -52,7 +54,12 @@ export default function ProjectsSection() {
       </Text>
       <div className={styles.grid}>
         {projects.map((project) => (
-          <div key={project.title} className={styles.card}>
+          <motion.div
+            key={project.title}
+            className={styles.card}
+            whileHover={{ y: -6, boxShadow: "0 12px 32px rgba(0, 0, 0, 0.15)" }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
             <div className={styles.thumbnail}>
               {project.image ? (
                 <img
@@ -99,9 +106,9 @@ export default function ProjectsSection() {
                 )}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </Reveal>
   );
 }
