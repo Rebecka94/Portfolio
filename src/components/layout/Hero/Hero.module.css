@@ -14,7 +14,7 @@
   align-items: flex-start;
   width: 100%;
   gap: var(--space-lg);
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -120,6 +120,7 @@
   height: auto;
   border-radius: 16px;
   display: block;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
 }
 
 /* Tablet and larger */

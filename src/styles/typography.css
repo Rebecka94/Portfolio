@@ -53,6 +53,6 @@ h3 {
   }
 
   h3 {
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
   }
 }
