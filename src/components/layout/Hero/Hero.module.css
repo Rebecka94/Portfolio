@@ -69,48 +69,6 @@
   height: 3rem;
 }
 
-.connect {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-top: var(--space-lg);
-  width: 100%;
-}
-
-.connectLabel {
-  font-size: var(--text-body-xs);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--color-text-black);
-  opacity: 0.7;
-}
-
-.socialRow {
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.socialIcon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1.5px solid var(--color-text-green);
-  color: var(--color-text-green);
-  text-decoration: none;
-  font-size: 16px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.socialIcon:hover {
-  background-color: var(--color-text-green);
-  color: var(--color-text-white);
-}
-
 .imageWrapper {
   width: 100%;
 }
@@ -167,9 +125,6 @@
   width: auto;
 }
 
-.connect {
-  align-items: flex-start;
-}
 
 .imageWrapper {
   flex: 1;
