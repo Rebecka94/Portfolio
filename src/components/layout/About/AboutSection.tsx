@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 import Text from "../../ui/Text/Text";
 import Reveal from "../../ui/Reveal/Reveal";
@@ -17,13 +18,9 @@ export default function AboutSection() {
             ideas into modern web interfaces using React, Next.js,
             TypeScript, and more.
           </Text>
-          <a
-            href="https://www.linkedin.com/in/rebecka-larssson94"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link to="/about">
             <Button variant="secondary" size="md">Learn more about me →</Button>
-          </a>
+          </Link>
         </div>
         <div className={styles.skills}>
           <SkillsCards />

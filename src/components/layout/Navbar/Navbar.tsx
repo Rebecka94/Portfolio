@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 import styles from "./Navbar.module.css";
 
@@ -20,6 +21,9 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className="container">
         <div className={styles.navWrapper}>
+          <Link to="/" className={styles.logo}>
+            <img src="/Logga.png" alt="RL" />
+          </Link>
           <div className={styles.mobileTop}>
             <Button variant="outlined" size="sm">
               Contact
@@ -35,13 +39,13 @@ export default function Navbar() {
           </div>
           <ul className={styles.desktopLinks}>
             <li>
-              <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <Link to="/#projects">Projects</Link>
             </li>
             <li>
               <Button variant="outlined" size="sm">
@@ -59,19 +63,19 @@ export default function Navbar() {
             <i className="fas fa-xmark"></i>
           </button>
           <li>
-            <a href="#home" onClick={() => setIsOpen(false)}>
+            <Link to="/" onClick={() => setIsOpen(false)}>
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#about" onClick={() => setIsOpen(false)}>
+            <Link to="/about" onClick={() => setIsOpen(false)}>
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#projects" onClick={() => setIsOpen(false)}>
+            <Link to="/#projects" onClick={() => setIsOpen(false)}>
               Projects
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
