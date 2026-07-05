@@ -1,11 +1,10 @@
 .footer {
   padding: 2rem 1rem;
   text-align: center;
-  background-attachment: fixed;
 }
 
 .text {
-  color: var(--color-text-secondary, #666);
+  color: var(--color-text-secondary);
   font-size: 0.875rem;
 }
 
@@ -17,7 +16,7 @@
 }
 
 .links a {
-  color: var(--color-primary, #0066cc);
+  color: var(--color-text-secondary);
   text-decoration: none;
   font-size: 0.875rem;
 }

@@ -11,7 +11,7 @@
 }
 
 .secondary {
-  background: var(--color-secondary);
+  background: var(--color-primary);
   color: var(--color-text-white);
   transition: filter 0.2s ease;
 }
@@ -22,14 +22,14 @@
 
 .outlined {
   background: transparent;
-  color: var(--color-secondary);
-  border: 2.5px solid var(--color-secondary);
+  color: var(--color-primary);
+  border: 2.5px solid var(--color-primary);
   font-weight: 550;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .outlined:hover {
-  background: var(--color-secondary);
+  background: var(--color-primary);
   color: var(--color-text-white);
 }
 

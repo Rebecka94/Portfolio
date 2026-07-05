@@ -38,6 +38,7 @@ const techGroups = [
 
 export default function TechStack() {
   return (
+    <section className={styles.section}>
     <Reveal className={`container ${styles.container}`}>
       <span className={styles.label}>Tech stack</span>
       <h2>Technologies I work with</h2>
@@ -61,5 +62,6 @@ export default function TechStack() {
         ))}
       </div>
     </Reveal>
+    </section>
   );
 }
