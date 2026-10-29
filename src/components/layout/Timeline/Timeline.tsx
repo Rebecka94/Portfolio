@@ -1,4 +1,5 @@
 import Reveal from "../../ui/Reveal/Reveal";
+import SectionHeader from "../../ui/SectionHeader/SectionHeader";
 import styles from "./Timeline.module.css";
 
 const items = [
@@ -27,13 +28,13 @@ const items = [
 
 export default function Timeline() {
   return (
-    <section className={styles.section}>
-      <Reveal className="container">
-        <span className={styles.label}>Experience</span>
+    <section className="container section">
+      <SectionHeader label="Experience" />
+      <Reveal>
         <h2>My journey so far.</h2>
         <div className={styles.list}>
           {items.map((item) => (
-            <div key={item.role} className={styles.item}>
+            <div key={item.role + item.company} className={styles.item}>
               <span className={styles.year}>{item.year}</span>
               <span className={styles.role}>{item.role}</span>
               <span className={styles.company}>{item.company}</span>
