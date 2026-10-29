@@ -43,7 +43,14 @@ export default function TechStack() {
       <SectionHeader label="Tech stack" />
       <Reveal>
         <div className={styles.content}>
-          <h2 className={styles.heading}>Technologies I work with</h2>
+          <div className={styles.intro}>
+            <h2 className={styles.heading}>Technologies I work with</h2>
+            <img
+              src="/computer.png"
+              alt=""
+              className={styles.illustration}
+            />
+          </div>
           <ul className={styles.rows}>
             {techGroups.map((group) => (
               <li key={group.category} className={styles.row}>

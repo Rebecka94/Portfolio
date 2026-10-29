@@ -14,6 +14,25 @@
   max-width: 720px;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.intro .heading {
+  margin-bottom: 0;
+}
+
+.illustration {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  align-self: flex-end;
+  mix-blend-mode: multiply;
+}
+
 .rows {
   list-style: none;
   margin: 0;
@@ -86,6 +105,17 @@
 
   .rows {
     margin-top: 10rem;
+  }
+
+  /* Heading at the top, illustration pinned to the bottom of the tech list */
+  .intro {
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
+  .illustration {
+    max-width: 460px;
+    align-self: flex-start;
   }
 
   .row {
