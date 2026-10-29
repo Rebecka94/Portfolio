@@ -1,4 +1,3 @@
-import { useIsMobile } from "./useIsMobile";
 import Button from "../../ui/Button/Button";
 import Text from "../../ui/Text/Text";
 import Reveal from "../../ui/Reveal/Reveal";
@@ -7,66 +6,31 @@ import styles from "./Hero.module.css";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
-  const isMobile = useIsMobile();
-
   return (
-    <section className={styles.hero}>
-      <div className="container">
-        <div className={styles.content}>
-          {isMobile ? (
-            <>
-              <span className={styles.label}>Hi, I'm</span>
-              <h1 className={styles.heading}>Rebecka Larsson</h1>
-              <Reveal className={styles.imageWrapper} distance={24}>
-                <img src="/profileimg.png" alt="Rebecka" className={styles.profile} />
-              </Reveal>
-              <Reveal className={styles.text} distance={24}>
-                <p className={styles.role}>
-                  Frontend Developer
-                </p>
-                <Text size="small">
-                  I craft clean, modern and user-friendly web experiences with a
-                  focus on design, performance and accessibility.
-                </Text>
-                <div className={styles.buttonRow}>
-                <Link to="/#projects" className={styles.buttonLink}>
-                  <Button variant="secondary" size="sm">View my work</Button>
-                </Link>
-                <Link to="/about" className={styles.buttonLink}>
-                  <Button variant="outlined" size="sm">Learn more about me</Button>
-                </Link>
-                </div>
-                <SocialLinks />
-              </Reveal>
-            </>
-          ) : (
-            <>
-              <Reveal className={styles.text} distance={24}>
-                <span className={styles.label}>Hi, I'm</span>
-                <h1>Rebecka Larsson</h1>
-                <p className={styles.role}>
-                  Frontend Developer
-                </p>
-                <Text size="medium">
-                  I craft clean, modern and user-friendly web experiences with a
-                  focus on design, performance and accessibility.
-                </Text>
-                <div className={styles.buttonRow}>
-                <Link to="/#projects" className={styles.buttonLink}>
-                  <Button variant="secondary" size="md">View my work</Button>
-                </Link>
-                <Link to="/about" className={styles.buttonLink}>
-                  <Button variant="outlined" size="md">Learn more about me</Button>
-                </Link>
-                </div>
-                <SocialLinks />
-              </Reveal>
-              <Reveal className={styles.imageWrapper} distance={24}>
-                <img src="/profileimg.png" alt="Rebecka" className={styles.profile} />
-              </Reveal>
-            </>
-          )}
-        </div>
+    <section className="container section">
+      <div className={styles.content}>
+        <Reveal className={styles.heading} distance={24}>
+          <h1>Rebecka Larsson</h1>
+          <p className={styles.role}>Frontend Developer</p>
+        </Reveal>
+        <Reveal className={styles.imageWrapper} distance={24}>
+          <img src="/profileimg.png" alt="Rebecka" className={styles.profile} />
+        </Reveal>
+        <Reveal className={styles.text} distance={24}>
+          <Text size="medium">
+            I craft clean, modern and user-friendly web experiences with a
+            focus on design, performance and accessibility.
+          </Text>
+          <div className={styles.buttonRow}>
+            <Link to="/#projects">
+              <Button variant="secondary" size="sm">View my work</Button>
+            </Link>
+            <Link to="/about">
+              <Button variant="outlined" size="sm">Learn more about me</Button>
+            </Link>
+          </div>
+          <SocialLinks />
+        </Reveal>
       </div>
     </section>
   );
