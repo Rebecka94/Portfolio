@@ -2,12 +2,16 @@ import styles from "./SocialLinks.module.css";
 
 interface SocialLinksProps {
   align?: "left" | "center";
+  showLabel?: boolean;
 }
 
-export default function SocialLinks({ align = "left" }: SocialLinksProps) {
+export default function SocialLinks({
+  align = "left",
+  showLabel = true,
+}: SocialLinksProps) {
   return (
     <div className={`${styles.connect} ${align === "center" ? styles.connectCenter : ""}`}>
-      <span className={styles.label}>Let's connect</span>
+      {showLabel && <span className={styles.label}>Let's connect</span>}
       <div className={styles.row}>
         <a
           href="https://github.com/Rebecka94"

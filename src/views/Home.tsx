@@ -1,3 +1,4 @@
+import Connect from "../components/layout/Connect/Connect";
 import Hero from "../components/layout/Hero/Hero";
 import TechStack from "../components/layout/Techstack/TechStack";
 import About from "./About";
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <TechStack />
       <Projects />
+      <Connect />
     </div>
   );
 }

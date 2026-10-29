@@ -54,15 +54,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="container section">
-      <SectionHeader
-        index={3}
-        label="My projects"
-        link={{
-          label: "View GitHub",
-          to: "https://github.com/Rebecka94",
-          external: true,
-        }}
-      />
+      <SectionHeader index={3} label="My projects" />
       <Reveal>
         <div className={styles.intro}>
           <h2>Things I've built</h2>

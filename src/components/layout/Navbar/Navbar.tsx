@@ -28,9 +28,11 @@ export default function Navbar() {
             <img src="/Logo.png" alt="RL" />
           </Link>
           <div className={styles.mobileTop}>
-            <Button variant="outlined" size="sm">
-              Contact
-            </Button>
+            <Link to="/#contact">
+              <Button variant="outlined" size="sm">
+                Contact
+              </Button>
+            </Link>
 
             <button
               className={styles.hamburger}
@@ -50,9 +52,11 @@ export default function Navbar() {
               <Link to="/#projects">Projects</Link>
             </li>
             <li>
-              <Button variant="outlined" size="sm">
-                Contact
-              </Button>
+              <Link to="/#contact">
+                <Button variant="outlined" size="sm">
+                  Contact
+                </Button>
+              </Link>
             </li>
           </ul>
         </div>

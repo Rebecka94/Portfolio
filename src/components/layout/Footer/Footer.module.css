@@ -7,6 +7,10 @@
   border-top: 1.5px solid var(--color-line);
 }
 
+.noBorder {
+  border-top: none;
+}
+
 .text,
 .link {
   margin: 0;
