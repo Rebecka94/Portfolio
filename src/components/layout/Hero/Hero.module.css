@@ -1,7 +1,9 @@
 /* Full-bleed dark green hero with light text */
 .hero {
-  /* Fill the rest of the first screen below the navbar (~80px mobile) */
-  min-height: calc(100svh - 80px);
+  --nav-height: 100px;
+  padding-top: var(--nav-height);
+  min-height: 100svh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,15 +16,28 @@
   mask:
     linear-gradient(#000, #000) top / 100% calc(100% - var(--wave-height) + 1px) no-repeat,
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1440V100C1150 100 1000 58 720 55S240 48 0 0Z'/%3E%3C/svg%3E") bottom / 100% var(--wave-height) no-repeat;
-  /* Starts at the navbar's colour so there is no seam between them */
+  position: relative;
   background:
-    radial-gradient(
-      ellipse at 85% 100%,
-      rgba(160, 190, 168, 0.55) 0%,
-      transparent 60%
-    ),
-    linear-gradient(180deg, var(--color-hero) 0%, var(--color-hero-end) 100%);
+    radial-gradient(45% 55% at 80% 55%, rgba(190, 205, 193, 0.75) 0%, transparent 70%),
+    radial-gradient(50% 40% at 55% 100%, rgba(165, 183, 170, 0.6) 0%, transparent 70%),
+    radial-gradient(35% 45% at 100% 100%, rgba(175, 192, 179, 0.6) 0%, transparent 70%),
+    radial-gradient(60% 70% at 5% 60%, rgba(30, 44, 35, 0.6) 0%, transparent 70%),
+    radial-gradient(40% 30% at 90% 0%, rgba(30, 44, 35, 0.5) 0%, transparent 70%),
+    linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.1) 48%, transparent 62%),
+    linear-gradient(160deg, var(--color-hero) 0%, var(--color-hero-end) 100%);
   color: var(--color-hero-text);
+}
+
+/* Fine film grain over the gradient */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  mix-blend-mode: overlay;
+  opacity: 0.35;
 }
 
 .hero h1,
@@ -31,6 +46,9 @@
 }
 
 .content {
+  /* Above the grain layer */
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-areas:
     "heading"
@@ -48,7 +66,9 @@
 
 .heading h1 {
   margin: 0;
-  font-size: clamp(3.25rem, 6vw + 1rem, 5.5rem);
+  /* Mobile: sized to the screen width so the name stays on one line */
+  font-size: clamp(2.25rem, 12.5vw, 3.5rem);
+  white-space: nowrap;
 }
 
 .role {
@@ -62,17 +82,22 @@
 
 .imageWrapper {
   grid-area: image;
+  margin-top: -2.25rem;
 }
 
 .profile {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius-md);
+  /* Fade the cut-out photo into the background towards the bottom */
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
 }
 
 .text {
   grid-area: text;
+  /* Extra room below the faded-out photo on mobile */
+  margin-top: var(--space-lg);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -86,7 +111,7 @@
 .buttonRow {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: 12px;
   width: 100%;
 }
 
@@ -143,6 +168,23 @@
 
 
 @media (min-width: 800px) {
+  .text {
+    margin-top: 0;
+  }
+
+  .imageWrapper {
+    margin-top: 0;
+  }
+
+  /* Cap the photo by screen height so the whole hero, wave included,
+     fits in the first view */
+  .profile {
+    width: auto;
+    max-width: 100%;
+    max-height: 60svh;
+    margin-left: auto;
+  }
+
   /* Keep the name on one line; size scales with the column width */
   .heading h1 {
     white-space: nowrap;
@@ -150,13 +192,14 @@
   }
 
   .hero {
-    min-height: calc(100svh - 90px);
+    --nav-height: 110px;
     --wave-height: 130px;
   }
 
   .buttonRow {
     flex-direction: row;
     width: auto;
+    gap: var(--space-md);
   }
 
   .buttonRow a,
@@ -169,7 +212,7 @@
   }
 
   .content {
-    grid-template-columns: minmax(0, 600px) minmax(0, 480px);
+    grid-template-columns: minmax(0, 600px) minmax(0, 560px);
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-areas:
       ". image"
@@ -178,8 +221,9 @@
       ". image";
     justify-content: space-between;
     column-gap: 6rem;
-    /* Nudge the image in from the right edge (container padding + 5rem) */
-    padding-right: 7.5rem;
+    /* A bit more side room than the default container padding */
+    padding-left: 5rem;
+    padding-right: 5rem;
     padding-top: 4rem;
   }
 }

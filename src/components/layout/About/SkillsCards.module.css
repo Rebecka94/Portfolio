@@ -10,13 +10,20 @@
   align-items: flex-start;
   gap: var(--space-sm);
   padding: var(--space-lg);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-line);
+  border-radius: 14px;
+  border: 1px solid rgba(47, 71, 57, 0.08);
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 32px rgba(47, 71, 57, 0.08);
 }
 
+/* Icon sits in a soft rounded tile */
 .cardIcon {
-  width: 32px;
-  height: 32px;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: var(--color-surface-muted);
   object-fit: contain;
   margin-bottom: var(--space-sm);
 }

@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="container">
         <div className={styles.navWrapper}>
           <Link to="/" className={styles.logo}>
-            <img src="/Logga.png" alt="RL" />
+            <img src="/Logo.png" alt="RL" />
           </Link>
           <div className={styles.mobileTop}>
             <Button variant="outlined" size="sm">
@@ -43,9 +43,6 @@ export default function Navbar() {
             </button>
           </div>
           <ul className={styles.desktopLinks}>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
             <li>
               <Link to="/about">About</Link>
             </li>
@@ -67,11 +64,6 @@ export default function Navbar() {
           >
             <i className="fas fa-xmark"></i>
           </button>
-          <li>
-            <Link to="/" onClick={() => setIsOpen(false)}>
-              Home
-            </Link>
-          </li>
           <li>
             <Link to="/about" onClick={() => setIsOpen(false)}>
               About
