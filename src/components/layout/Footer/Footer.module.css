@@ -1,9 +1,22 @@
-.footer {
-  padding: 2rem 1rem;
-  text-align: center;
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding: var(--space-md) 0 2rem;
+  border-top: 1px solid var(--color-line);
 }
 
-.text {
-  color: var(--color-text-secondary);
-  font-size: 0.875rem;
+.text,
+.link {
+  margin: 0;
+  font-size: var(--text-body-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-text-black);
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
