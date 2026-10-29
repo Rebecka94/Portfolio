@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "../../ui/Button/Button";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+  // The home page hero is green, so the navbar matches it there
+  const isHome = pathname === "/";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -18,7 +21,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={`${styles.navbar} ${isHome ? styles.tinted : ""}`}>
       <div className="container">
         <div className={styles.navWrapper}>
           <Link to="/" className={styles.logo}>

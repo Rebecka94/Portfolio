@@ -6,6 +6,12 @@
   --color-secondary: #5f7867;
   --color-accent: #e08a72;
 
+  /* Home page hero + navbar */
+  --color-hero: #516658;
+  --color-hero-end: #2b3931;
+  /* Softened white used for everything on the hero/navbar */
+  --color-hero-text: rgba(255, 255, 255, 0.92);
+
   --color-text-black: #1f1f1f;
   --color-text-green: #2f4739;
   --color-text-white: #ffffff;

@@ -1,3 +1,34 @@
+/* Full-bleed dark green hero with light text */
+.hero {
+  /* Fill the rest of the first screen below the navbar (~80px mobile) */
+  min-height: calc(100svh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+  /* Wavy bottom edge: solid mask above, wave shape in the last --wave-height */
+  --wave-height: 70px;
+  -webkit-mask:
+    linear-gradient(#000, #000) top / 100% calc(100% - var(--wave-height) + 1px) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1440V100C1150 100 1000 58 720 55S240 48 0 0Z'/%3E%3C/svg%3E") bottom / 100% var(--wave-height) no-repeat;
+  mask:
+    linear-gradient(#000, #000) top / 100% calc(100% - var(--wave-height) + 1px) no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1440V100C1150 100 1000 58 720 55S240 48 0 0Z'/%3E%3C/svg%3E") bottom / 100% var(--wave-height) no-repeat;
+  /* Starts at the navbar's colour so there is no seam between them */
+  background:
+    radial-gradient(
+      ellipse at 85% 100%,
+      rgba(160, 190, 168, 0.55) 0%,
+      transparent 60%
+    ),
+    linear-gradient(180deg, var(--color-hero) 0%, var(--color-hero-end) 100%);
+  color: var(--color-hero-text);
+}
+
+.hero h1,
+.hero .role {
+  color: var(--color-hero-text);
+}
 
 .content {
   display: grid;
@@ -7,6 +38,8 @@
     "text";
   gap: var(--space-lg);
   padding-top: 2rem;
+  /* Keep content clear of the wavy edge */
+  padding-bottom: calc(var(--wave-height) + 2rem);
 }
 
 .heading {
@@ -15,6 +48,7 @@
 
 .heading h1 {
   margin: 0;
+  font-size: clamp(3.25rem, 6vw + 1rem, 5.5rem);
 }
 
 .role {
@@ -45,6 +79,10 @@
   gap: var(--space-md);
 }
 
+.text > p {
+  color: var(--color-hero-text);
+}
+
 .buttonRow {
   display: flex;
   flex-direction: column;
@@ -63,6 +101,22 @@
   text-decoration: none;
 }
 
+/* Invert buttons so they read on the green background */
+.buttonRow a:first-child button {
+  background-color: var(--color-hero-text);
+  color: var(--color-text-green);
+}
+
+.buttonRow a:last-child button {
+  border-color: var(--color-hero-text);
+  color: var(--color-hero-text);
+}
+
+.buttonRow a:last-child button:hover {
+  background-color: var(--color-hero-text);
+  color: var(--color-text-green);
+}
+
 /* Centre "Let's connect" on mobile, left-aligned on desktop */
 .socials {
   width: 100%;
@@ -72,7 +126,34 @@
   align-items: center;
 }
 
+.socials span {
+  color: var(--color-hero-text);
+  opacity: 1;
+}
+
+.socials a {
+  border-color: var(--color-hero-text);
+  color: var(--color-hero-text);
+}
+
+.socials a:hover {
+  background-color: var(--color-hero-text);
+  color: var(--color-text-green);
+}
+
+
 @media (min-width: 800px) {
+  /* Keep the name on one line; size scales with the column width */
+  .heading h1 {
+    white-space: nowrap;
+    font-size: clamp(3rem, 5.6vw, 5.5rem);
+  }
+
+  .hero {
+    min-height: calc(100svh - 90px);
+    --wave-height: 130px;
+  }
+
   .buttonRow {
     flex-direction: row;
     width: auto;
@@ -97,6 +178,8 @@
       ". image";
     justify-content: space-between;
     column-gap: 6rem;
+    /* Nudge the image in from the right edge (container padding + 5rem) */
+    padding-right: 7.5rem;
     padding-top: 4rem;
   }
 }

@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className="container section">
-      <div className={styles.content}>
+    <section className={styles.hero}>
+      <div className={`container section ${styles.content}`}>
         <Reveal className={styles.heading} distance={24}>
           <h1>Rebecka Larsson</h1>
           <p className={styles.role}>Frontend Developer</p>

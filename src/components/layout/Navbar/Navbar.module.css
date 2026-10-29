@@ -2,6 +2,38 @@
   position: relative;
 }
 
+/* Green variant used on the home page to blend into the hero */
+.tinted {
+  background-color: var(--color-hero);
+}
+
+.tinted .logo img {
+  mix-blend-mode: screen;
+  filter: grayscale(1) invert(1) brightness(1.6);
+}
+
+.tinted .desktopLinks a {
+  color: var(--color-hero-text);
+}
+
+.tinted .desktopLinks a::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpath d='M0 5 Q 5 0 10 5 Q 15 10 20 5' stroke='%23ffffff' stroke-opacity='0.92' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+}
+
+.tinted .navWrapper button:not(.hamburger) {
+  border-color: var(--color-hero-text);
+  color: var(--color-hero-text);
+}
+
+.tinted .navWrapper button:not(.hamburger):hover {
+  background-color: var(--color-hero-text);
+  color: var(--color-text-green);
+}
+
+.tinted .hamburger span {
+  background-color: var(--color-hero-text);
+}
+
 .navWrapper {
   padding: 20px 0;
   display: flex;
