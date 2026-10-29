@@ -1,67 +1,70 @@
 import Reveal from "../../ui/Reveal/Reveal";
+import SectionHeader from "../../ui/SectionHeader/SectionHeader";
 import styles from "./TechStack.module.css";
 
 const techGroups = [
   {
     category: "Languages",
     items: [
-      { name: "HTML", image: "HTML5.png" },
-      { name: "CSS", image: "CSS3.png" },
-      { name: "JavaScript", image: "JavaScript.png" },
-      { name: "TypeScript", image: "TypeScript.png" },
+      { name: "HTML", image: "html5.svg" },
+      { name: "CSS", image: "css3.svg" },
+      { name: "JavaScript", image: "javascript.svg" },
+      { name: "TypeScript", image: "typescript.svg" },
     ],
   },
   {
     category: "Frameworks & Libraries",
     items: [
-      { name: "React", image: "React.png" },
-      { name: "Next.js", image: "Next.js.png" },
-      { name: "Node.js", image: "Node.js.png" },
+      { name: "React", image: "react.svg" },
+      { name: "Next.js", image: "nextdotjs.svg" },
+      { name: "Node.js", image: "nodedotjs.svg" },
     ],
   },
   {
     category: "Tools",
     items: [
-      { name: "Git", image: "Git.png" },
-      { name: "GitHub", image: "GitHub.png" },
-      { name: "Azure DevOps", image: "Azure-Devops.png" },
+      { name: "Git", image: "git.svg" },
+      { name: "GitHub", image: "github.svg" },
+      { name: "Azure DevOps", image: "azuredevops.svg" },
     ],
   },
   {
     category: "Design",
     items: [
-      { name: "Figma", image: "Figma.png" },
-      { name: "Illustrator", image: "Adobe-Illustrator.png" },
+      { name: "Figma", image: "figma.svg" },
+      { name: "Illustrator", image: "adobeillustrator.svg" },
     ],
   },
 ];
 
 export default function TechStack() {
   return (
-    <section className={styles.section}>
-    <Reveal className={`container ${styles.container}`}>
-      <span className={styles.label}>Tech stack</span>
-      <h2>Technologies I work with</h2>
-      <div className={styles.techGroups}>
-        {techGroups.map((group) => (
-          <div key={group.category} className={styles.techGroup}>
-            <span className={styles.groupLabel}>{group.category}</span>
-            <div className={styles.techList}>
-              {group.items.map((tech) => (
-                <div key={tech.name} className={styles.techcontainer}>
-                  <img
-                    src={`/images/tech/${tech.image}`}
-                    alt={tech.name}
-                    className={styles.icon}
-                  />
-                  <span>{tech.name}</span>
+    <section className="container section">
+      <SectionHeader label="Tech stack" />
+      <Reveal>
+        <div className={styles.content}>
+          <h2 className={styles.heading}>Technologies I work with</h2>
+          <ul className={styles.rows}>
+            {techGroups.map((group) => (
+              <li key={group.category} className={styles.row}>
+                <h3 className={styles.category}>{group.category}</h3>
+                <div className={styles.techList}>
+                  {group.items.map((tech) => (
+                    <span key={tech.name} className={styles.tech}>
+                      <img
+                        src={`/images/tech/mono/${tech.image}`}
+                        alt=""
+                        className={styles.icon}
+                      />
+                      {tech.name}
+                    </span>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </Reveal>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Reveal>
     </section>
   );
 }
