@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
 import Text from "../../ui/Text/Text";
 import Reveal from "../../ui/Reveal/Reveal";
+import SectionHeader from "../../ui/SectionHeader/SectionHeader";
 import styles from "./ProjectsSection.module.css";
 
 interface Project {
@@ -42,73 +42,71 @@ const projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <Reveal id="projects" className={`container ${styles.container}`}>
-      <div className={styles.header}>
-        <div>
-          <span className={styles.label}>My projects</span>
+    <section id="projects" className="container section">
+      <SectionHeader
+        label="My projects"
+        link={{
+          label: "View GitHub",
+          to: "https://github.com/Rebecka94",
+          external: true,
+        }}
+      />
+      <Reveal>
+        <div className={styles.intro}>
           <h2>Things I've built</h2>
+          <Text size="small">
+            These are some of the projects I've been working on, both individually and in groups.
+          </Text>
         </div>
-      </div>
-      <Text size="small">
-        These are some of the projects I've been working on, both individually and in groups.
-      </Text>
-      <div className={styles.grid}>
-        {projects.map((project) => (
-          <motion.div
-            key={project.title}
-            className={styles.card}
-            whileHover={{ y: -6, boxShadow: "0 12px 32px rgba(0, 0, 0, 0.15)" }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          >
-            <div className={styles.thumbnail}>
-              {project.image ? (
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className={styles.thumbnailImage}
-                />
-              ) : (
-                <span className={styles.thumbnailInitial}>
-                  {project.title.charAt(0)}
-                </span>
-              )}
-            </div>
-            <div className={styles.cardBody}>
-              <h3>{project.title}</h3>
-              <Text size="xsmall">{project.description}</Text>
-              <div className={styles.tags}>
-                {project.tags.map((tag) => (
-                  <span key={tag} className={styles.tag}>
-                    {tag}
+        <div className={styles.grid}>
+          {projects.map((project) => (
+            <div key={project.title} className={styles.card}>
+              <div className={styles.thumbnail}>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className={styles.thumbnailImage}
+                  />
+                ) : (
+                  <span className={styles.thumbnailInitial}>
+                    {project.title.charAt(0)}
                   </span>
-                ))}
+                )}
               </div>
-              <div className={styles.links}>
-                {project.liveUrl && (
-                  <a
-                    href={project.liveUrl}
-                    className={styles.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Live demo
-                  </a>
-                )}
-                {project.repoUrl && (
-                  <a
-                    href={project.repoUrl}
-                    className={styles.link}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Source code
-                  </a>
-                )}
+              <div className={styles.cardBody}>
+                <div className={styles.titleRow}>
+                  <h3>{project.title}</h3>
+                  <div className={styles.links}>
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        className={styles.link}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Visit
+                      </a>
+                    )}
+                    {project.repoUrl && (
+                      <a
+                        href={project.repoUrl}
+                        className={styles.link}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Code
+                      </a>
+                    )}
+                  </div>
+                </div>
+                <span className={styles.tags}>{project.tags.join(" · ")}</span>
+                <p className={styles.description}>{project.description}</p>
               </div>
             </div>
-          </motion.div>
-        ))}
-      </div>
-    </Reveal>
+          ))}
+        </div>
+      </Reveal>
+    </section>
   );
 }
