@@ -29,7 +29,7 @@ const items = [
 export default function Timeline() {
   return (
     <section className="container section">
-      <SectionHeader label="Experience" />
+      <SectionHeader index={3} label="Experience" />
       <Reveal>
         <h2>My journey so far.</h2>
         <div className={styles.list}>

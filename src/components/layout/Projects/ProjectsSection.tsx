@@ -55,6 +55,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="container section">
       <SectionHeader
+        index={3}
         label="My projects"
         link={{
           label: "View GitHub",

@@ -11,7 +11,7 @@ export default function AboutPage() {
   return (
     <div>
       <section className="container section">
-        <SectionHeader label="About me" bordered={false} />
+        <SectionHeader index={1} label="About me" bordered={false} />
         <Reveal>
           <div className={styles.introInner}>
             <h1>Hi, I'm Rebecka.</h1>
@@ -36,7 +36,7 @@ export default function AboutPage() {
       </section>
 
       <section className="container section">
-        <SectionHeader label="My story" />
+        <SectionHeader index={2} label="My story" />
         <Reveal>
           <h2>From classrooms to codebases.</h2>
           <div className={styles.storyColumns}>
@@ -77,6 +77,7 @@ export default function AboutPage() {
 
       <section className="container section">
         <SectionHeader
+          index={4}
           label="Ready to collaborate?"
           link={{ label: "All projects", to: "/#projects" }}
         />

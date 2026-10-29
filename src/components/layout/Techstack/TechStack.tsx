@@ -40,7 +40,7 @@ const techGroups = [
 export default function TechStack() {
   return (
     <section className={`container section ${styles.section}`}>
-      <SectionHeader label="Tech stack" />
+      <SectionHeader index={2} label="Tech stack" />
       <Reveal>
         <div className={styles.content}>
           <div className={styles.intro}>

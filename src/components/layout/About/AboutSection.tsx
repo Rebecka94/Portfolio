@@ -9,7 +9,7 @@ import SkillsCards from "./SkillsCards";
 export default function AboutSection() {
   return (
     <section id="about" className="container section">
-      <SectionHeader label="About me" />
+      <SectionHeader index={1} label="About me" bordered={false} />
       <Reveal>
         <div className={styles.content}>
           <div className={styles.intro}>
