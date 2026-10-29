@@ -39,7 +39,7 @@ const techGroups = [
 
 export default function TechStack() {
   return (
-    <section className="container section">
+    <section className={`container section ${styles.section}`}>
       <SectionHeader label="Tech stack" />
       <Reveal>
         <div className={styles.content}>
@@ -50,13 +50,13 @@ export default function TechStack() {
                 <h3 className={styles.category}>{group.category}</h3>
                 <div className={styles.techList}>
                   {group.items.map((tech) => (
-                    <span key={tech.name} className={styles.tech}>
+                    <span key={tech.name} className={styles.tech} title={tech.name}>
                       <img
                         src={`/images/tech/mono/${tech.image}`}
                         alt=""
                         className={styles.icon}
                       />
-                      {tech.name}
+                      <span className={styles.techName}>{tech.name}</span>
                     </span>
                   ))}
                 </div>

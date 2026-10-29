@@ -29,7 +29,9 @@ export default function Hero() {
               <Button variant="outlined" size="sm">Learn more about me</Button>
             </Link>
           </div>
-          <SocialLinks />
+          <div className={styles.socials}>
+            <SocialLinks />
+          </div>
         </Reveal>
       </div>
     </section>

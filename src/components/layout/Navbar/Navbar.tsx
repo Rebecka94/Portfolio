@@ -34,7 +34,9 @@ export default function Navbar() {
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
-              <i className="fas fa-bars"></i>
+              <span />
+              <span />
+              <span />
             </button>
           </div>
           <ul className={styles.desktopLinks}>
