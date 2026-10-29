@@ -1,8 +1,6 @@
 :root {
-  --color-background: #fafcfb;
-  --color-background-light: #f6f5f0;
-  --color-background-dark: #f3f6f4;
-   --color-background-green: #f3f6f4;
+  --color-background: #f3f6f4;
+  --color-surface-muted: #e2e8e4;
 
   --color-primary: #2f4839;
   --color-secondary: #5f7867;
@@ -11,6 +9,8 @@
   --color-text-black: #1f1f1f;
   --color-text-green: #2f4739;
   --color-text-white: #ffffff;
+
+  --color-line: #1f1f1f;
 
   /* spacing */
   --space-xs: 5px;
@@ -22,12 +22,5 @@
   /* radius */
   --radius-sm: 4px;
   --radius-md: 8px;
-
-  --gradient-surface: radial-gradient(
-      circle at bottom right,
-      rgba(95, 120, 103, 0.12) 0%,
-      rgba(95, 120, 103, 0.06) 25%,
-      transparent 55%
-    ),
-    var(--color-background-light);
+  --radius-pill: 999px;
 }

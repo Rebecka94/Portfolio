@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  margin-bottom: 3rem;
+}
+
+.bordered {
+  border-top: 1px solid var(--color-line);
+}
+
+.label,
+.link {
+  font-size: var(--text-body-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-black);
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.link:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 800px) {
+  .header {
+    margin-bottom: 5rem;
+  }
+}
