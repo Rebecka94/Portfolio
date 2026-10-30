@@ -39,7 +39,9 @@ export default function Timeline() {
     <section className={`container section ${styles.section}`}>
       <SectionHeader index={3} label="Experience" bordered={false} />
       <Reveal>
-        <h2>My journey so far.</h2>
+        <h2>
+          My journey <em>so far.</em>
+        </h2>
         <div className={styles.list}>
           {items.map((item) => (
             <div key={item.role + item.company} className={styles.item}>

@@ -7,7 +7,9 @@ export default function Connect() {
     <section id="contact" className={styles.connect}>
       <Reveal className={`container ${styles.inner}`}>
         <span className={styles.label}>Let's connect</span>
-        <h2 className={styles.heading}>Interested in working together?</h2>
+        <h2 className={styles.heading}>
+          Interested in working <em>together?</em>
+        </h2>
         <p className={styles.text}>
           I'm always open to new opportunities, interesting projects or just a
           chat about design, development or anything in between. Feel free to

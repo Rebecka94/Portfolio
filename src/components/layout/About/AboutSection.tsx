@@ -13,7 +13,9 @@ export default function AboutSection() {
       <Reveal>
         <div className={styles.content}>
           <div className={styles.intro}>
-            <h2>Building ideas through code and design.</h2>
+            <h2>
+              Building ideas through code and <em>design.</em>
+            </h2>
             <Text size="small">
               I'm a frontend developer with a background in education and a
               strong interest in design and user experience. I enjoy turning

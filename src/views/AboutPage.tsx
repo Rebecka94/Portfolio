@@ -20,7 +20,9 @@ export default function AboutPage() {
         <SectionHeader index={1} label="About me" bordered={false} />
         <Reveal className={styles.intro}>
           <div className={styles.introInner}>
-            <h1>Hi, I'm Rebecka.</h1>
+            <h1>
+              Hi, I'm <em>Rebecka.</em>
+            </h1>
             <div className={styles.introText}>
               <Text size="medium">
                 I'm a frontend developer based in Sweden with hands-on experience
@@ -98,7 +100,9 @@ export default function AboutPage() {
       <section className={connectStyles.connect}>
         <Reveal className={`container ${connectStyles.inner}`}>
           <span className={connectStyles.label}>Ready to collaborate?</span>
-          <h2 className={connectStyles.heading}>Want to see my work?</h2>
+          <h2 className={connectStyles.heading}>
+            Want to see my <em>work?</em>
+          </h2>
           <p className={connectStyles.text}>
             Check out the projects I've been building
           </p>

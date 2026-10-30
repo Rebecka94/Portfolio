@@ -76,8 +76,17 @@
   font-family: var(--font-family-heading);
   font-size: var(--text-sm);
   font-weight: 400;
+  font-style: italic;
   letter-spacing: -0.02em;
   color: var(--color-text-green);
+}
+
+.roleDesktop {
+  display: none;
+}
+
+.roleMobile {
+  margin: 0 0 var(--space-md);
 }
 
 .imageWrapper {
@@ -106,6 +115,10 @@
 
 .text > p {
   color: var(--color-hero-text);
+  font-weight: 300;
+  /* Light text on dark green renders heavier on macOS without this */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .buttonRow {
@@ -171,6 +184,14 @@
 @media (min-width: 800px) {
   .text {
     margin-top: 0;
+  }
+
+  .roleDesktop {
+    display: block;
+  }
+
+  .roleMobile {
+    display: none;
   }
 
   /* Cap the photo by screen height so the whole hero, wave included,

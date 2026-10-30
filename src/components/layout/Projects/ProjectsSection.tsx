@@ -11,7 +11,9 @@ export default function ProjectsSection() {
       <SectionHeader index={3} label="My projects" />
       <Reveal>
         <div className={styles.intro}>
-          <h2>Things I've built</h2>
+          <h2>
+            Things I've <em>built.</em>
+          </h2>
           <Text size="small">
             These are some of the projects I've been working on, both individually and in groups.
           </Text>

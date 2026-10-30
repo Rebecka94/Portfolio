@@ -44,7 +44,9 @@ export default function TechStack() {
       <Reveal>
         <div className={styles.content}>
           <div className={styles.intro}>
-            <h2 className={styles.heading}>Technologies I work with</h2>
+            <h2 className={styles.heading}>
+              Technologies I <em>work with.</em>
+            </h2>
             <img
               src="/computer.png"
               alt=""

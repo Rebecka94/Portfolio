@@ -33,6 +33,10 @@
   max-width: 680px;
 }
 
+.introText p {
+  font-weight: 300;
+}
+
 /* My story: slightly darker full-width band */
 .storySection {
   background-color: rgba(47, 71, 57, 0.05);

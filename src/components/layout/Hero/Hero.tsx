@@ -11,12 +11,18 @@ export default function Hero() {
       <div className={`container section ${styles.content}`}>
         <Reveal className={styles.heading} distance={24}>
           <h1>Rebecka Larsson</h1>
-          <p className={styles.role}>Frontend Developer</p>
+          {/* Desktop: role under the name. Mobile shows it under the photo */}
+          <p className={`${styles.role} ${styles.roleDesktop}`}>
+            Frontend Developer
+          </p>
         </Reveal>
         <Reveal className={styles.imageWrapper} distance={24}>
           <img src="/profile-photo.jpg" alt="Rebecka" className={styles.profile} />
         </Reveal>
         <Reveal className={styles.text} distance={24}>
+          <p className={`${styles.role} ${styles.roleMobile}`}>
+            Frontend Developer
+          </p>
           <Text size="medium">
             I craft clean, modern and user-friendly web experiences with a
             focus on design, performance and accessibility.
