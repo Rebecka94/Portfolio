@@ -22,10 +22,10 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.navbar} ${isHome ? styles.tinted : ""}`}>
-      <div className="container">
+      <div className={`container ${styles.inner}`}>
         <div className={styles.navWrapper}>
-          <Link to="/" className={styles.logo}>
-            <img src="/Logo.png" alt="RL" />
+          <Link to="/" className={styles.logo} aria-label="Rebecka Larsson, home">
+            <span className={styles.logoMark} aria-hidden="true" />
           </Link>
           <div className={styles.mobileTop}>
             <a href="mailto:rebeckalarsson.1994@gmail.com">

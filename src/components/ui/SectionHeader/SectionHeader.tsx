@@ -15,7 +15,12 @@ export default function SectionHeader({
   bordered = true,
 }: SectionHeaderProps) {
   return (
-    <div className={`${styles.header} ${bordered ? styles.bordered : ""}`}>
+    <div
+      className={`${styles.header} ${bordered ? styles.bordered : ""} ${
+        // Sections after the first get more room above their number
+        index !== undefined && index > 1 ? styles.spaced : ""
+      }`}
+    >
       <span className={styles.label}>
         {index !== undefined && (
           <span className={styles.index}>

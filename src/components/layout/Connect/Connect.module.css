@@ -115,7 +115,7 @@
   }
 
   .heading {
-    font-size: var(--text-xl);
+    font-size: 3.5rem;
   }
 
   /* Desktop: everything centred */

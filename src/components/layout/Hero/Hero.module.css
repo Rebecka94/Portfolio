@@ -224,9 +224,6 @@
       ". image";
     justify-content: space-between;
     column-gap: 6rem;
-    /* A bit more side room than the default container padding */
-    padding-left: 5rem;
-    padding-right: 5rem;
     padding-top: 4rem;
   }
 }

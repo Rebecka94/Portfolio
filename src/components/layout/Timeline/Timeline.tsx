@@ -4,6 +4,13 @@ import styles from "./Timeline.module.css";
 
 const items = [
   {
+    year: "sep 2026 - present",
+    role: "Frontend Developer",
+    company: "METS Technology AB, Gothenburg",
+    description:
+      "Responsible for building a new web layout and website for Metstech. Building a functional and user-friendly website based on the company's needs, and responsible for the structure, responsive design and implementation of the new layout.",
+  },
+  {
     year: "jan 2026 - jun 2026",
     role: "Internship, Frontend Developer",
     company: "Nexer AB, Gothenburg",
@@ -29,7 +36,7 @@ const items = [
 export default function Timeline() {
   return (
     <section className="container section">
-      <SectionHeader index={3} label="Experience" />
+      <SectionHeader index={3} label="Experience" bordered={false} />
       <Reveal>
         <h2>My journey so far.</h2>
         <div className={styles.list}>

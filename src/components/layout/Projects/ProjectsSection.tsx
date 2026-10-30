@@ -28,7 +28,7 @@ const projects: Project[] = [
     description:
       "Bee Rise is a 2D game where you control a bee that jumps on flowers to fly as high as possible. The higher you go, the more points you earn, while avoiding birds and airplanes. The game was built with TypeScript, following Object-Oriented Programming (OOP) principles, and uses p5.js vectors for movement and game mechanics.",
     tags: ["React", "TypeScript", "p5.js"],
-    image: "/beerise-mockup.png",
+    image: "/beerise-screenshot.jpg",
     liveUrl: "https://spelprojekt.vercel.app/",
     repoUrl: "https://github.com/Rebecka94/spelprojekt",
   },

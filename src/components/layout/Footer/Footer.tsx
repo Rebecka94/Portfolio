@@ -4,12 +4,12 @@ import styles from "./Footer.module.css";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const { pathname } = useLocation();
-  // The green Connect section sits right above the footer on the home page
-  const isHome = pathname === "/";
+  // A green section sits right above the footer on these pages
+  const hasGreenAbove = pathname === "/" || pathname === "/about";
 
   return (
     <footer className="container">
-      <div className={`${styles.content} ${isHome ? styles.noBorder : ""}`}>
+      <div className={`${styles.content} ${hasGreenAbove ? styles.noBorder : ""}`}>
         <p className={styles.text}>
           © {currentYear} Rebecka Larsson. All rights reserved.
         </p>

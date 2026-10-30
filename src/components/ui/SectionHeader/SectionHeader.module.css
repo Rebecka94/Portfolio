@@ -8,6 +8,10 @@
 }
 
 /* Slightly heavier line on mobile, hairline on desktop */
+.spaced {
+  padding-top: 1.75rem;
+}
+
 .bordered {
   border-top: 1.5px solid var(--color-line);
 }
@@ -43,5 +47,9 @@
 
   .bordered {
     border-top-width: 1px;
+  }
+
+  .spaced {
+    padding-top: 2.5rem;
   }
 }

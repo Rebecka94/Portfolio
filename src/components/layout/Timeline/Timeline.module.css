@@ -52,8 +52,44 @@
   margin-top: var(--space-sm);
 }
 
+/* Desktop: line down the centre, entries alternate left and right of it */
 @media (min-width: 800px) {
   .list {
     margin-top: 5rem;
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    background: var(--color-primary);
+  }
+
+  .item {
+    width: calc(50% - 3rem);
+    max-width: none;
+  }
+
+  /* Left-side entries are right-aligned so the text meets the line */
+  .item:nth-child(odd) {
+    text-align: right;
+  }
+
+  .item:nth-child(odd)::before {
+    left: auto;
+    right: calc(-3rem - 6px);
+  }
+
+  .item:nth-child(even) {
+    margin-left: auto;
+  }
+
+  .item:nth-child(even)::before {
+    left: calc(-3rem - 6px);
   }
 }

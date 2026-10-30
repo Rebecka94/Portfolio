@@ -12,8 +12,8 @@
   background-color: transparent;
 }
 
-.tinted .logo img {
-  filter: none;
+.tinted .logoMark {
+  background-color: var(--color-text-white);
 }
 
 .tinted .desktopLinks a {
@@ -52,11 +52,15 @@
   gap: 5rem;
 }
 
-.logo img {
-  height: 50px;
-  width: auto;
+/* The logo file is used as a mask so it can be filled with any colour:
+   heading green on light pages, white on the home hero */
+.logoMark {
   display: block;
-  filter: brightness(0);
+  height: 50px;
+  aspect-ratio: 1329 / 1183;
+  background-color: var(--color-text-green);
+  -webkit-mask: url("/Logo.png") center / contain no-repeat;
+  mask: url("/Logo.png") center / contain no-repeat;
 }
 
 .mobileTop {
@@ -213,6 +217,12 @@
 
 /* Tablet and larger */
 @media (min-width: 800px) {
+  /* Header sits a bit closer to the edges than the page content */
+  .inner {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .navWrapper {
     padding: 20px 0;
     display: flex;
