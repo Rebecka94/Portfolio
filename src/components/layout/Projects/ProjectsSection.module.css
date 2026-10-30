@@ -14,6 +14,7 @@
 
 /* White card: image on top, text area below */
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -65,7 +66,30 @@
   margin: 0;
 }
 
+.cardLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Covers the whole card; buttons and links below sit above it */
+.cardLink::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.cardLink:focus-visible {
+  outline: none;
+}
+
+.card:has(.cardLink:focus-visible) {
+  outline: 2px solid var(--color-text-green);
+  outline-offset: 4px;
+}
+
 .links {
+  position: relative;
+  z-index: 1;
   order: 2;
   display: flex;
   flex-shrink: 0;
@@ -116,6 +140,8 @@
 }
 
 .readMore {
+  z-index: 1;
+  text-decoration: none;
   order: 4;
   align-self: flex-start;
   margin-top: auto;
@@ -153,8 +179,17 @@
   transition: width 0.35s ease;
 }
 
-.readMore:hover::after {
+.readMore:hover::after,
+.card:hover .readMore::after {
   width: 100%;
+}
+
+.card:hover .readMore {
+  color: var(--color-primary);
+}
+
+.card:hover .readMore .arrow {
+  transform: translate(2px, -2px);
 }
 
 .arrow {
@@ -172,9 +207,6 @@
   transform: translate(2px, -2px);
 }
 
-.readMore[aria-expanded="true"] .arrow {
-  transform: rotate(180deg);
-}
 
 @media (min-width: 600px) {
   .grid {

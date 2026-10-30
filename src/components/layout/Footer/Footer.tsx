@@ -5,7 +5,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const { pathname } = useLocation();
   // A green section sits right above the footer on these pages
-  const hasGreenAbove = pathname === "/" || pathname === "/about";
+  const hasGreenAbove =
+    pathname === "/" ||
+    pathname === "/about" ||
+    pathname.startsWith("/projects/");
 
   return (
     <footer className="container">

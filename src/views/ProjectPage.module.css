@@ -1,0 +1,242 @@
+.back {
+  display: inline-block;
+  margin: var(--space-lg) 0 3rem;
+  font-size: var(--text-body-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-black);
+  text-decoration: none;
+}
+
+.back:hover {
+  color: var(--color-primary);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-bottom: 3rem;
+}
+
+.tags {
+  font-size: var(--text-body-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.title {
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.link,
+.linkPrimary {
+  padding: 10px 22px;
+  border: 1.5px solid var(--color-text-green);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-family-heading);
+  font-size: var(--text-button-sm);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.link {
+  color: var(--color-text-green);
+}
+
+.linkPrimary,
+.link:hover {
+  background-color: var(--color-text-green);
+  color: var(--color-text-white);
+}
+
+.linkPrimary:hover {
+  filter: brightness(1.15);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  max-height: 70svh;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.body {
+  max-width: 760px;
+  margin-top: 4rem;
+}
+
+.description {
+  margin: 0;
+  font-size: var(--text-body-md);
+  line-height: 1.6;
+}
+
+/* "Read about other projects": dark green band like the Connect section */
+.others {
+  margin-top: 2rem;
+  padding: 4rem 0;
+  background: linear-gradient(160deg, var(--color-hero-end) 0%, #2c3a30 100%);
+  color: var(--color-hero-text);
+}
+
+.othersLabel {
+  display: block;
+  margin-bottom: var(--space-md);
+  font-size: var(--text-body-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.othersHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: 3rem;
+}
+
+.othersHeading {
+  margin: 0;
+  color: var(--color-hero-text);
+}
+
+.othersHeading em {
+  font-style: italic;
+}
+
+/* Miniature cards, packed from the left */
+.othersGrid {
+  display: grid;
+  /* Mobile: thumbnails side by side on one row */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.otherCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  color: inherit;
+  text-decoration: none;
+}
+
+.otherThumb {
+  display: block;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.otherThumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.otherCard:hover .otherThumb img {
+  transform: scale(1.04);
+}
+
+/* Number, title and summary on the left, round arrow button on the right */
+.otherInfo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.otherText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.otherIndex {
+  font-size: var(--text-body-xs);
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+.otherTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-body-sm);
+  line-height: 1.15;
+}
+
+.otherSummary {
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.otherButton {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.otherButton svg {
+  width: 8px;
+  height: 8px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
+}
+
+.otherCard:hover .otherButton {
+  background-color: var(--color-hero-text);
+  color: var(--color-text-green);
+}
+
+.otherCard:hover .otherButton svg {
+  transform: translate(1px, -1px);
+}
+
+@media (min-width: 800px) {
+  .others {
+    padding: 3.5rem 0;
+  }
+
+  .othersHeader {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-xl);
+    margin-bottom: 2.5rem;
+  }
+
+  .othersHeading {
+    font-size: 3.5rem;
+  }
+
+  .othersGrid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 180px));
+    gap: var(--space-xl);
+  }
+}
