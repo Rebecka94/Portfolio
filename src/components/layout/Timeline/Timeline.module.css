@@ -1,3 +1,7 @@
+.section {
+  padding-bottom: 2.5rem;
+}
+
 .list {
   position: relative;
   margin-top: var(--space-xl);
@@ -52,8 +56,61 @@
   margin-top: var(--space-sm);
 }
 
+/* CV download under the timeline: text left, button right, thin line above */
+.cv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-top: 6rem;
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(47, 71, 57, 0.2);
+}
+
+.cvText {
+  max-width: 520px;
+  margin: 0;
+  font-family: var(--font-family-heading);
+  font-size: var(--text-body-md);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-text-green);
+}
+
+.cvLink {
+  text-decoration: none;
+}
+
+.cvLink button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: 0;
+}
+
+.cvIcon {
+  width: 11px;
+  height: 11px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 /* Desktop: line down the centre, entries alternate left and right of it */
 @media (min-width: 800px) {
+  .section {
+    padding-bottom: 3.5rem;
+  }
+
+  .cv {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-xl);
+  }
+
   .list {
     margin-top: 5rem;
     padding-left: 0;

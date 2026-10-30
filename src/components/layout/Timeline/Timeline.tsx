@@ -1,3 +1,4 @@
+import Button from "../../ui/Button/Button";
 import Reveal from "../../ui/Reveal/Reveal";
 import SectionHeader from "../../ui/SectionHeader/SectionHeader";
 import styles from "./Timeline.module.css";
@@ -35,7 +36,7 @@ const items = [
 
 export default function Timeline() {
   return (
-    <section className="container section">
+    <section className={`container section ${styles.section}`}>
       <SectionHeader index={3} label="Experience" bordered={false} />
       <Reveal>
         <h2>My journey so far.</h2>
@@ -48,6 +49,24 @@ export default function Timeline() {
               <p className={styles.desc}>{item.description}</p>
             </div>
           ))}
+        </div>
+        <div className={styles.cv}>
+          <p className={styles.cvText}>
+            Want the full picture? Download my CV to read more about my
+            experience and education.
+          </p>
+          <a
+            href="/cv/rebecka-cv.pdf"
+            download="Rebecka-Larsson-CV.pdf"
+            className={styles.cvLink}
+          >
+            <Button variant="outlined" size="sm">
+              Download CV
+              <svg className={styles.cvIcon} viewBox="0 0 12 12" aria-hidden="true">
+                <path d="M6 2v7M3 6l3 3 3-3M2.5 10.5h7" />
+              </svg>
+            </Button>
+          </a>
         </div>
       </Reveal>
     </section>
