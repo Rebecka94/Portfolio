@@ -82,16 +82,15 @@
 
 .imageWrapper {
   grid-area: image;
-  margin-top: -2.25rem;
 }
 
 .profile {
   width: 100%;
   height: auto;
   display: block;
-  /* Fade the cut-out photo into the background towards the bottom */
-  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .text {
@@ -172,17 +171,14 @@
     margin-top: 0;
   }
 
-  .imageWrapper {
-    margin-top: 0;
-  }
-
   /* Cap the photo by screen height so the whole hero, wave included,
      fits in the first view */
   .profile {
     width: auto;
     max-width: 100%;
     max-height: 60svh;
-    margin-left: auto;
+    /* Centred in its column rather than pushed to the right edge */
+    margin: 0 auto;
   }
 
   /* Keep the name on one line; size scales with the column width */

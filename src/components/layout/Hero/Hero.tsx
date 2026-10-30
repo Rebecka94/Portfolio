@@ -14,7 +14,7 @@ export default function Hero() {
           <p className={styles.role}>Frontend Developer</p>
         </Reveal>
         <Reveal className={styles.imageWrapper} distance={24}>
-          <img src="/Profile-pic.png" alt="Rebecka" className={styles.profile} />
+          <img src="/profile-photo.jpg" alt="Rebecka" className={styles.profile} />
         </Reveal>
         <Reveal className={styles.text} distance={24}>
           <Text size="medium">
