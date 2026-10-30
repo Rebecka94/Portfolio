@@ -28,11 +28,11 @@ export default function Navbar() {
             <img src="/Logo.png" alt="RL" />
           </Link>
           <div className={styles.mobileTop}>
-            <Link to="/#contact">
+            <a href="mailto:rebeckalarsson.1994@gmail.com">
               <Button variant="outlined" size="sm">
                 Contact
               </Button>
-            </Link>
+            </a>
 
             <button
               className={styles.hamburger}
@@ -52,11 +52,14 @@ export default function Navbar() {
               <Link to="/#projects">Projects</Link>
             </li>
             <li>
-              <Link to="/#contact">
+              <a
+                href="mailto:rebeckalarsson.1994@gmail.com"
+                className={styles.contactLink}
+              >
                 <Button variant="outlined" size="sm">
                   Contact
                 </Button>
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
