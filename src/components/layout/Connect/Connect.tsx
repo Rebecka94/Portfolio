@@ -20,7 +20,11 @@ export default function Connect() {
               <path d="M3 9L9 3M4 3h5v5" />
             </svg>
           </a>
-          <a href="/cv.pdf" download className={styles.buttonOutlined}>
+          <a
+            href="/cv/rebecka-cv.pdf"
+            download="Rebecka-Larsson-CV.pdf"
+            className={styles.buttonOutlined}
+          >
             Download CV
             <svg className={styles.arrow} viewBox="0 0 12 12" aria-hidden="true">
               <path d="M6 2v7M3 6l3 3 3-3M2.5 10.5h7" />
