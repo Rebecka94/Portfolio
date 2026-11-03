@@ -1,9 +1,22 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: var(--space-lg);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .back {
   display: inline-block;
-  margin: var(--space-lg) 0 3rem;
+  margin-bottom: 3rem;
   font-size: var(--text-body-xs);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-text-black);
   text-decoration: none;
@@ -13,20 +26,13 @@
   color: var(--color-primary);
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  margin-bottom: 3rem;
-}
-
 .tags {
+  margin-bottom: var(--space-md);
   font-size: var(--text-body-xs);
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-secondary);
+  color: var(--color-text-black);
 }
 
 .title {
@@ -36,13 +42,16 @@
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
+  gap: var(--space-md);
+  margin-top: 2rem;
 }
 
 .link,
 .linkPrimary {
-  padding: 10px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px 24px;
   border: 1.5px solid var(--color-text-green);
   border-radius: var(--radius-pill);
   font-family: var(--font-family-heading);
@@ -65,23 +74,299 @@
   filter: brightness(1.15);
 }
 
+.linkArrow {
+  width: 11px;
+  height: 11px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.tagline {
+  max-width: 440px;
+  margin: 2.5rem 0 0;
+  font-family: var(--font-family-heading);
+  font-size: var(--text-body-md);
+  line-height: 1.45;
+  color: var(--color-text-black);
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
 .image {
   display: block;
   width: 100%;
-  max-height: 70svh;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius-md);
 }
 
-.body {
-  max-width: 760px;
-  margin-top: 4rem;
+/* About: the section header draws the line above, like Tech stack */
+.about {
+  margin-top: 3rem;
 }
 
-.description {
+.aboutGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Two images side by side, the third on its own row below */
+.aboutGallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 560px;
+  /* Sits against the right edge on desktop */
+  justify-self: end;
+}
+
+.aboutGallery img:nth-child(3n) {
+  grid-column: 1 / -1;
+}
+
+.aboutGallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(47, 71, 57, 0.12);
+  border-radius: var(--radius-md);
+  box-sizing: border-box;
+}
+
+.aboutHeading {
+  margin: 0 0 2rem;
+}
+
+/* Numbered rows split by thin lines */
+.highlights {
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid rgba(31, 31, 31, 0.15);
+}
+
+.highlight {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  grid-template-areas:
+    "index label"
+    ". text";
+  row-gap: var(--space-xs);
+  padding: 1rem 0;
+  border-top: 1px solid rgba(31, 31, 31, 0.15);
+  align-items: baseline;
+}
+
+.highlightIndex {
+  grid-area: index;
+  font-size: var(--text-body-xs);
+  color: var(--color-text-black);
+  font-variant-numeric: tabular-nums;
+}
+
+.highlightLabel {
+  grid-area: label;
+  font-size: var(--text-body-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-green);
+}
+
+.highlightText {
+  grid-area: text;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Tech stack and features sections */
+.block {
+  margin-top: 5rem;
+}
+
+/* Tech stack: large heading and a short intro above the cards */
+.techHeader {
+  margin-bottom: 2.5rem;
+}
+
+.techHeading {
+  margin: 0 0 var(--space-md);
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
   margin: 0;
-  font-size: var(--text-body-md);
+  padding: 0;
+  list-style: none;
+}
+
+/* Light card with a thin border; equal height within a row */
+.techCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1.75rem;
+  border: 1px solid rgba(47, 71, 57, 0.18);
+  border-radius: var(--radius-md);
+  /* Same light green tint as the home page hero */
+  background-color: rgba(47, 71, 57, 0.05);
+  box-shadow: 0 1px 2px rgba(47, 71, 57, 0.04);
+  box-sizing: border-box;
+}
+
+/* Logos on the left, "01 / 06" on the right */
+.techTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+/* Logos share one height so different formats line up */
+.techLogos {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  height: 44px;
+}
+
+.techLogos img {
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+}
+
+.techCount {
+  flex-shrink: 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--color-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.techName {
+  margin: 0 0 var(--space-sm);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--color-text-green);
+}
+
+.techDescription {
+  margin: 0;
+  font-size: var(--text-body-sm);
   line-height: 1.6;
+}
+
+/* Features: heading with the intro text underneath */
+.featuresHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 800px) {
+  .featuresHeader {
+    margin-bottom: 4rem;
+  }
+}
+
+.featuresHeading {
+  margin: 0;
+}
+
+/* One column: icon then text, steps split by a thin line */
+.timeline,
+.timelineColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Steps split by thin lines: none above the first step in each column,
+   one under the last. On mobile the two columns stack into one list */
+.feature {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(47, 71, 57, 0.15);
+}
+
+.feature:first-child {
+  border-top: none;
+}
+
+.feature:last-child {
+  border-bottom: 1px solid rgba(47, 71, 57, 0.15);
+}
+
+.feature {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.featureIndex {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-family: var(--font-family-heading);
+  font-size: var(--text-body-sm);
+  color: var(--color-text-green);
+}
+
+.featureTitle {
+  margin: 0 0 var(--space-sm);
+  font-size: var(--text-sm);
+}
+
+.featureSummary {
+  max-width: 440px;
+  margin: 0;
+  font-family: var(--font-family-heading);
+  font-size: var(--text-body-sm);
+  line-height: 1.45;
+  color: var(--color-text-black);
+}
+
+/* Icon in a soft, slightly irregular blob */
+.featureIcon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 60px;
+  border-radius: 58% 42% 52% 48% / 55% 50% 50% 45%;
+  background-color: rgba(47, 71, 57, 0.1);
+  color: var(--color-text-green);
+}
+
+.featureIcon svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* "Read about other projects": dark green band like the Connect section */
@@ -219,6 +504,63 @@
 }
 
 @media (min-width: 800px) {
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 8fr);
+    align-items: start;
+    column-gap: 4rem;
+    margin-top: var(--space-xl);
+  }
+
+  .about {
+    margin-top: 2.5rem;
+  }
+
+  /* Content takes the left half, images the right half */
+  .aboutGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 4rem;
+    align-items: start;
+  }
+
+  .aboutContent {
+    grid-column: 1;
+  }
+
+  .highlight {
+    grid-template-columns: 3rem 9rem 1fr;
+    grid-template-areas: "index label text";
+    padding: 1.1rem 0;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  /* Two columns side by side, each a list split by thin lines */
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 4rem;
+  }
+
+  .feature {
+    gap: 2rem;
+    padding: 2.25rem 0;
+  }
+
+  .featureIcon {
+    width: 120px;
+    height: 96px;
+  }
+
+  .featureIcon svg {
+    width: 38px;
+    height: 38px;
+  }
+
   .others {
     padding: 3.5rem 0;
   }
