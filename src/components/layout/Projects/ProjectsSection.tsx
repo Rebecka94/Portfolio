@@ -14,7 +14,7 @@ export default function ProjectsSection() {
           <h2>
             Things I've <em>built.</em>
           </h2>
-          <Text size="small">
+          <Text size="lead">
             These are some of the projects I've been working on, both individually and in groups.
           </Text>
         </div>

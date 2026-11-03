@@ -24,7 +24,7 @@ export default function AboutPage() {
               Hi, I'm <em>Rebecka.</em>
             </h1>
             <div className={styles.introText}>
-              <Text size="medium">
+              <Text size="lead">
                 I'm a frontend developer based in Sweden with hands-on experience
                 building responsive web applications in React and Next.js. I enjoy
                 turning UX/UI designs into intuitive, production-ready interfaces

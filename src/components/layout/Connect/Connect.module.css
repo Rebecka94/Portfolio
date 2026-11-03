@@ -28,7 +28,8 @@
 .text {
   max-width: 560px;
   margin: 0 0 var(--space-sm);
-  font-size: var(--text-body-sm);
+  font-family: var(--font-family-heading);
+  font-size: var(--text-body-md);
   line-height: 1.5;
 }
 
