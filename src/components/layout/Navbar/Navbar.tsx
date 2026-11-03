@@ -6,7 +6,7 @@ import styles from "./Navbar.module.css";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { pathname } = useLocation();
-  // The home page hero is green, so the navbar matches it there
+  // On the home page the navbar floats on top of the hero
   const isHome = pathname === "/";
 
   const toggleMenu = () => {

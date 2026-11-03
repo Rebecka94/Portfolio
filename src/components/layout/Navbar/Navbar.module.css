@@ -3,39 +3,13 @@
   z-index: 10;
 }
 
-/* Home page: floats transparently on top of the hero's gradient */
+/* Home page: floats transparently on top of the hero */
 .tinted {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   background-color: transparent;
-}
-
-.tinted .logoMark {
-  background-color: var(--color-text-white);
-}
-
-.tinted .desktopLinks a {
-  color: var(--color-text-white);
-}
-
-.tinted .desktopLinks a::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10'%3E%3Cpath d='M0 5 Q 5 0 10 5 Q 15 10 20 5' stroke='%23ffffff' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-}
-
-.tinted .navWrapper button:not(.hamburger) {
-  border-color: var(--color-text-white);
-  color: var(--color-text-white);
-}
-
-.tinted .navWrapper button:not(.hamburger):hover {
-  background-color: var(--color-text-white);
-  color: var(--color-text-green);
-}
-
-.tinted .hamburger span {
-  background-color: var(--color-text-white);
 }
 
 .navWrapper button:not(.hamburger) {
@@ -53,7 +27,7 @@
 }
 
 /* The logo file is used as a mask so it can be filled with any colour:
-   heading green on light pages, white on the home hero */
+   heading green everywhere */
 .logoMark {
   display: block;
   height: 50px;

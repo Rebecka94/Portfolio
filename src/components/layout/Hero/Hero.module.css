@@ -1,4 +1,23 @@
-/* Full-bleed dark green hero with light text */
+/* Wraps the hero so the wave line can sit on top of the masked edge */
+.heroWrapper {
+  --wave-height: 70px;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+/* Thin line drawn along the wavy bottom edge */
+.waveLine {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: var(--wave-height);
+  overflow: visible;
+  pointer-events: none;
+  color: var(--color-text-green);
+}
+
+/* Full-bleed hero with a light green tint */
 .hero {
   --nav-height: 84px;
   padding-top: var(--nav-height);
@@ -7,9 +26,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 4rem;
-  /* Wavy bottom edge: solid mask above, wave shape in the last --wave-height */
-  --wave-height: 70px;
+  /* Wavy bottom edge: solid mask above, wave shape in the last --wave-height
+     (set on .heroWrapper) */
   -webkit-mask:
     linear-gradient(#000, #000) top / 100% calc(100% - var(--wave-height) + 1px) no-repeat,
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1440V100C1150 100 1000 58 720 55S240 48 0 0Z'/%3E%3C/svg%3E") bottom / 100% var(--wave-height) no-repeat;
@@ -17,36 +35,11 @@
     linear-gradient(#000, #000) top / 100% calc(100% - var(--wave-height) + 1px) no-repeat,
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1440V100C1150 100 1000 58 720 55S240 48 0 0Z'/%3E%3C/svg%3E") bottom / 100% var(--wave-height) no-repeat;
   position: relative;
-  background:
-    radial-gradient(45% 55% at 80% 55%, rgba(190, 205, 193, 0.75) 0%, transparent 70%),
-    radial-gradient(50% 40% at 55% 100%, rgba(165, 183, 170, 0.6) 0%, transparent 70%),
-    radial-gradient(35% 45% at 100% 100%, rgba(175, 192, 179, 0.6) 0%, transparent 70%),
-    radial-gradient(60% 70% at 5% 60%, rgba(30, 44, 35, 0.6) 0%, transparent 70%),
-    radial-gradient(40% 30% at 90% 0%, rgba(30, 44, 35, 0.5) 0%, transparent 70%),
-    linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.1) 48%, transparent 62%),
-    linear-gradient(160deg, var(--color-hero) 0%, var(--color-hero-end) 100%);
-  color: var(--color-hero-text);
-}
-
-/* Fine film grain over the gradient */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 200px 200px;
-  mix-blend-mode: overlay;
-  opacity: 0.35;
-}
-
-.hero h1,
-.hero .role {
-  color: var(--color-hero-text);
+  /* Same light green tint as the "My story" band on the About page */
+  background-color: rgba(47, 71, 57, 0.05);
 }
 
 .content {
-  /* Above the grain layer */
   position: relative;
   z-index: 1;
   display: grid;
@@ -58,6 +51,12 @@
   padding-top: var(--space-sm);
   /* Keep content clear of the wavy edge */
   padding-bottom: calc(var(--wave-height) + 2rem);
+}
+
+/* Hero only: wider side padding than the shared .container */
+.hero .content {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .heading {
@@ -95,17 +94,15 @@
 
 .profile {
   width: 100%;
+  max-width: 420px;
   height: auto;
   display: block;
-  aspect-ratio: 5 / 4;
-  object-fit: cover;
-  object-position: 50% 30%;
-  border-radius: var(--radius-md);
+  margin: 0 auto;
+  /* The image file already has rounded corners */
 }
 
 .text {
   grid-area: text;
-  /* Extra room below the faded-out photo on mobile */
   margin-top: var(--space-xs);
   display: flex;
   flex-direction: column;
@@ -114,11 +111,7 @@
 }
 
 .text > p {
-  color: var(--color-hero-text);
   font-weight: 300;
-  /* Light text on dark green renders heavier on macOS without this */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .buttonRow {
@@ -139,22 +132,6 @@
   text-decoration: none;
 }
 
-/* Invert buttons so they read on the green background */
-.buttonRow a:first-child button {
-  background-color: var(--color-hero-text);
-  color: var(--color-text-green);
-}
-
-.buttonRow a:last-child button {
-  border-color: var(--color-hero-text);
-  color: var(--color-hero-text);
-}
-
-.buttonRow a:last-child button:hover {
-  background-color: var(--color-hero-text);
-  color: var(--color-text-green);
-}
-
 /* Centre "Let's connect" on mobile, left-aligned on desktop */
 .socials {
   width: 100%;
@@ -163,21 +140,6 @@
 .socials > div {
   align-items: center;
   margin-top: var(--space-xs);
-}
-
-.socials span {
-  color: var(--color-hero-text);
-  opacity: 1;
-}
-
-.socials a {
-  border-color: var(--color-hero-text);
-  color: var(--color-hero-text);
-}
-
-.socials a:hover {
-  background-color: var(--color-hero-text);
-  color: var(--color-text-green);
 }
 
 
@@ -199,21 +161,28 @@
   .profile {
     width: auto;
     max-width: 100%;
-    max-height: 60svh;
-    aspect-ratio: 1 / 1;
+    max-height: 50svh;
     /* Centred in its column rather than pushed to the right edge */
     margin: 0 auto;
   }
 
   /* Keep the name on one line; size scales with the column width */
+  .hero .content {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+  }
+
   .heading h1 {
     white-space: nowrap;
     font-size: clamp(3rem, 5.6vw, 5.5rem);
   }
 
+  .heroWrapper {
+    --wave-height: 130px;
+  }
+
   .hero {
     --nav-height: 110px;
-    --wave-height: 130px;
   }
 
   .socials > div {
