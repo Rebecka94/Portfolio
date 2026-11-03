@@ -8,6 +8,14 @@ export default function Navbar() {
   const { pathname } = useLocation();
   // On the home page the navbar floats on top of the hero
   const isHome = pathname === "/";
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -21,10 +29,18 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav className={`${styles.navbar} ${isHome ? styles.tinted : ""}`}>
+    <nav
+      className={`${styles.navbar} ${isHome ? styles.tinted : ""} ${
+        isScrolled ? styles.scrolled : ""
+      }`}
+    >
       <div className={`container ${styles.inner}`}>
         <div className={styles.navWrapper}>
-          <Link to="/" className={styles.logo} aria-label="Rebecka Larsson, home">
+          <Link
+            to="/"
+            className={styles.logo}
+            aria-label="Rebecka Larsson, home"
+          >
             <span className={styles.logoMark} aria-hidden="true" />
           </Link>
           <div className={styles.mobileTop}>

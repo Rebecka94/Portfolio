@@ -1,15 +1,22 @@
 .navbar {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 10;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* Home page: floats transparently on top of the hero */
 .tinted {
-  position: absolute;
-  top: 0;
+  position: fixed;
   left: 0;
   right: 0;
   background-color: transparent;
+}
+
+/* Once scrolled: page background and a faint line underneath */
+.scrolled {
+  background-color: var(--color-background);
+  box-shadow: 0 1px 0 rgba(47, 71, 57, 0.1);
 }
 
 .navWrapper button:not(.hamburger) {

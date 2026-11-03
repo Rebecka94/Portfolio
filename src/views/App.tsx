@@ -22,7 +22,8 @@ export default function App() {
       el = el.offsetParent as HTMLElement | null;
     }
 
-    window.scrollTo({ top, behavior: "smooth" });
+    const navHeight = document.querySelector("nav")?.offsetHeight ?? 0;
+    window.scrollTo({ top: top - navHeight, behavior: "smooth" });
   }, [pathname, hash]);
 
   return (
