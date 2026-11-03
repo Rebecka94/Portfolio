@@ -6,6 +6,7 @@ interface RevealProps {
   distance?: number;
   className?: string;
   id?: string;
+  amount?: number;
 }
 
 export default function Reveal({
@@ -13,6 +14,7 @@ export default function Reveal({
   distance = 60,
   className,
   id,
+  amount = 0.3,
 }: RevealProps) {
   return (
     <motion.div
@@ -20,7 +22,7 @@ export default function Reveal({
       className={className}
       initial={{ opacity: 0, y: distance }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {children}
