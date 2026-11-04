@@ -44,7 +44,7 @@ export default function ProjectPage() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Demo
+                    {project.liveLabel ?? "Demo"}
                     <svg
                       className={styles.linkArrow}
                       viewBox="0 0 12 12"
@@ -118,7 +118,13 @@ export default function ProjectPage() {
               )}
             </div>
             {project.gallery && project.gallery.length > 0 && (
-              <div className={styles.aboutGallery}>
+              <div
+                className={
+                  project.galleryLayout === "phones"
+                    ? `${styles.aboutGallery} ${styles.aboutGalleryPhones}`
+                    : styles.aboutGallery
+                }
+              >
                 {project.gallery.map((image) => (
                   <img key={image.src} src={image.src} alt={image.alt} />
                 ))}

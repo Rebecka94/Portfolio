@@ -37,6 +37,8 @@ export interface Project {
   tags: string[];
   image?: string;
   liveUrl?: string;
+  /** Text on the liveUrl button, defaults to "Demo" */
+  liveLabel?: string;
   repoUrl?: string;
   /** Serif intro shown under the buttons at the top of the project page */
   tagline?: string;
@@ -44,6 +46,7 @@ export interface Project {
   highlights?: Highlight[];
   /** Images shown next to "About the project" on desktop */
   gallery?: GalleryImage[];
+  galleryLayout?: "screens" | "phones";
   techStack?: TechItem[];
   features?: Feature[];
 }
@@ -183,11 +186,49 @@ export const projects: Project[] = [
   },
   {
     slug: "divebudz",
-    title: "DiveBudz (In Progress)",
+    title: "DiveBudz",
     summary: "A mobile app for finding dive buddies.",
     description:
       "DiveBudz is a React Native mobile application that aims to connect scuba divers with other dive buddies nearby. The app will allow users to discover divers in their area, connect with them, and schedule diving trips together. The goal is to make it easier for divers to meet new people and plan enjoyable diving experiences. The project is currently under development.",
     tags: ["React Native", "TypeScript", "MUI"],
     image: "/divebudz-mockup.png",
+    liveUrl:
+      "https://www.figma.com/proto/OnBBStUM8hlqrWpSDoaAKG/Untitled?node-id=1-3&t=64bmtnlFe6x1V4pv-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3",
+    liveLabel: "Prototype",
+    tagline:
+      "A mobile app that helps scuba divers find dive buddies nearby, connect and plan dives together.",
+    highlights: [
+      {
+        label: "Profile",
+        text: "Show who you are as a diver, with certificate, number of dives, club and availability.",
+      },
+      {
+        label: "Discover",
+        text: "Find divers near you on a map and see when they are available.",
+      },
+      {
+        label: "Connect",
+        text: "Start a chat with other divers straight from their profile card.",
+      },
+      {
+        label: "Plan",
+        text: "Agree on a time and place and schedule your next dive together.",
+      },
+    ],
+    galleryLayout: "phones",
+    gallery: [
+      {
+        src: "/profile-divebudz.png",
+        alt: "DiveBudz profile screen with about me, availability and diving info",
+      },
+      {
+        src: "/map-divebudz.png",
+        alt: "Map view with a nearby diver's card showing club, certificate and available times",
+      },
+      {
+        src: "/chat-divebudz.png",
+        alt: "Chat between two divers planning a dive session",
+      },
+    ],
   },
 ];

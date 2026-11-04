@@ -51,7 +51,7 @@ export default function ProjectsSection() {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          Demo
+                          {project.liveLabel ?? "Demo"}
                         </a>
                       )}
                       {project.repoUrl && (
