@@ -191,7 +191,7 @@ export const projects: Project[] = [
     description:
       "DiveBudz is a React Native mobile application that aims to connect scuba divers with other dive buddies nearby. The app will allow users to discover divers in their area, connect with them, and schedule diving trips together. The goal is to make it easier for divers to meet new people and plan enjoyable diving experiences. The project is currently under development.",
     tags: ["React Native", "TypeScript", "MUI"],
-    image: "/divebudz-mockup.png",
+    image: "/Divebudz-water.png",
     liveUrl:
       "https://www.figma.com/proto/OnBBStUM8hlqrWpSDoaAKG/Untitled?node-id=1-3&t=64bmtnlFe6x1V4pv-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A3",
     liveLabel: "Prototype",
